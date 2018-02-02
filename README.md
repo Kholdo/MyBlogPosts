@@ -1,5 +1,5 @@
 # MyBlogPosts
-Here I will upload the code that appears in the publications of my blog:
+Aquí iré colocando el código que aparece en las publicaciones de my blog:
 ### [koldopina.com](https://koldopina.com/)
 
 
