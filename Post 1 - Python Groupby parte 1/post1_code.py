@@ -1,6 +1,6 @@
 #!/usr/bin/env python.
 """
-File name: post_defaultDict.py
+File name: post1_code.py
 Author: Koldo Pina
 Date created: 31/01/2018
 Date last modified: 31/01/2018
