@@ -67,3 +67,20 @@ def groupby_agg(data, groupby_fields, agg_fields, aggr_list, how_list):
                     d_res[k].append(len([item for item in v if item]))
     return d_res
 
+
+data = kw_cl_list
+groupby_fields = ['ZONA', 'PLANTA', 'TIPO']
+agg_fields = ['EQUIPO', 'KW_FRIO']
+aggr_list = ['count', 'sum']
+how_list = ['distinct', '']
+
+groupedData = groupby_agg(data, groupby_fields,
+                          agg_fields, aggr_list, how_list)
+
+
+print("{:<7}{:<9}{:<11}{:<15}{:<20}".format(
+    "ZONA", "PLANTA", "TIPO", "NUM_EQUIPOS", "SUMA KW FRIO"))
+for key in sorted(groupedData.keys(), key=lambda key: key.split('|')[0]):
+    zona, planta, tipo = key.split('|')
+    print("{:<7}{:<9}{:<11}{:<15}{:<20}".format(
+        zona, planta, tipo, groupedData[key][0], groupedData[key][1]))
