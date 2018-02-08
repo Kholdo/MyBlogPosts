@@ -22,3 +22,13 @@ for index, row in enumerate(csv_rdr):
             key = encabezado[index]
             d[key] = value
         kw_cl_list.append(d)
+
+def groupby_agg(data, groupby_fields, agg_fields, aggr_list, how_list):
+    """
+    :param data: dataset de datos formato lista de diccionarios
+    :param groupby_fields: campo sobre el que agregar. Ejemplo: ['ZONA,'PLANTA',TIPO']
+    :param agg_fields: lista con los campos a agregar. Ejemplo: ['EQUIPO', 'KW_FRIO']
+    :param aggr_list: lista con las funciones de agregacion. Correspondientes con agg_fields. Ejemplo: ['count', 'sum']
+    :param how_list: lista tipo ['distinct', '']
+    :return: diccionario -->d_res, lista -->res.
+    """
