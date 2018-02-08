@@ -7,7 +7,7 @@ Date last modified: 08/02/2018
 Python Version: 3.5
 """
 
-#Cargamos los datos en una lista de diccionarios
+# Cargamos los datos en una lista de diccionarios
 import csv
 
 csv_rdr = csv.reader(open('potencias_frio.csv'), delimiter=';')
@@ -36,13 +36,34 @@ def groupby_agg(data, groupby_fields, agg_fields, aggr_list, how_list):
     from collections import defaultdict
     d_res = defaultdict(list)
     for index, agg_field in enumerate(agg_fields):
-        if aggr_list[index]=='sum':
+        if aggr_list[index] == 'sum':
             d = defaultdict(list)
-            for row in data:
-                groupby_field_string =''
+            for s_row in data:
+                groupby_field_string = ''
                 for field in groupby_fields:
-                    if groupby_field_string!='':
-                        groupby_field_string += '|' + row[field]
+                    if groupby_field_string != '':
+                        groupby_field_string += '|' + s_row[field]
                     else:
-                        groupby_field_string+=row[field]
-                d[groupby_field_string].append(row[agg_field])
+                        groupby_field_string += s_row[field]
+                d[groupby_field_string].append(s_row[agg_field])
+            for k, v in sorted(d.items()):
+                if v is None:
+                    v = 0.0
+                d_res[k].append(sum(v))
+        if aggr_list[index] == 'count':
+            d = defaultdict(list)
+            for c_row in data:
+                groupby_field_string = ''
+                for field in groupby_fields:
+                    if groupby_field_string != '':
+                        groupby_field_string += '|' + c_row[field]
+                    else:
+                        groupby_field_string += c_row[field]
+                d[groupby_field_string].append(c_row[agg_field])
+            for k, v in sorted(d.items()):
+                if how_list[index] == 'distinct':
+                    d_res[k].append(len(set([item for item in v if item])))
+                else:
+                    d_res[k].append(len([item for item in v if item]))
+    return d_res
+
