@@ -11,7 +11,7 @@ Python Version: 3.5
 import csv
 
 csv_rdr = csv.reader(open('potencias_frio.csv'), delimiter=';')
-kw_cl_dict = []
+kw_cl_list = []
 for index, row in enumerate(csv_rdr):
     if index == 0:
         encabezado = row
@@ -21,4 +21,4 @@ for index, row in enumerate(csv_rdr):
         for index, value in enumerate(row):
             key = encabezado[index]
             d[key] = value
-        kw_cl_dict.append(d)
+        kw_cl_list.append(d)
