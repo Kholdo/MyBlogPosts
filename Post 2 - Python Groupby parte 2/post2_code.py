@@ -61,4 +61,4 @@ for k, v in sorted(d.items()):
 print("{:<7}{:<9}{:<11}{:<13}".format("ZONA", "PLANTA", "DIA_MES", "HORAS_TRABAJO"))
 for row in res_dd:
     zona, planta, dia_mes = row[0].split('|')
-    print("{:<7}{:<9}{:<11}{:<13}".format(zona, planta, dia_mes, str(row[1])))
+print("{:<7}{:<9}{:<11}{:<13}".format(zona, planta, dia_mes, str(row[1])))
