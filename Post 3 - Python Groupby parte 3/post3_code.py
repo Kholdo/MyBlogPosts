@@ -29,3 +29,19 @@ class myGroupBy():
         self.groupby_fields = groupby_fields
         self.agg_fields = agg_fields
         self.aggr_list = aggr_list
+
+        def groupby_agg(self):
+            """
+            :param data: dataset de datos formato lista de diccionarios
+            :param groupby_fields: campo sobre el que agregar. Ejemplo: ['ZONA,'PLANTA',TIPO']
+            :param agg_fields: lista con los campos a agregar. Ejemplo: ['EQUIPO', 'KW_FRIO']
+            :param aggr_list: lista con las funciones de agregacion. Correspondientes con agg_fields. Ejemplo: ['count', 'sum']
+            :return: diccionario
+            """
+
+            def aggr_sum(agg_field):
+                """
+                :param  agg_field: campo que se va a agregar con la funcion sum
+                :return diccionario con las claves y los valores agrupados
+                """
+
