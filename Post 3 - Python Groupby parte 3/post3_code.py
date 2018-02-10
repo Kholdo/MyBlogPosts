@@ -44,4 +44,15 @@ class myGroupBy():
                 :param  agg_field: campo que se va a agregar con la funcion sum
                 :return diccionario con las claves y los valores agrupados
                 """
+                from collections import defaultdict
+                d_sum = defaultdict(list)
+                for s_row in self.data:
+                    groupby_field_string = ''
+                    for field in self.groupby_fields:
+                        if groupby_field_string != '':
+                            groupby_field_string += '|' + s_row[field]
+                        else:
+                            groupby_field_string += s_row[field]
+                    d_sum[groupby_field_string].append(s_row[agg_field])
+                return d_sum
 
