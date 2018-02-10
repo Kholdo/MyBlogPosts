@@ -56,3 +56,15 @@ class myGroupBy():
                     d_aggr[groupby_field_string].append(row[agg_field])
                 return d_aggr
 
+            from collections import defaultdict
+            d_res = defaultdict(list)
+            for index, agg_field in enumerate(self.agg_fields):
+                if aggr_list[index] == 'sum':
+                    for k, v in sorted(d_aggr(agg_field).items()):
+                        if v is None:
+                            v = 0.0
+                        d_res[k].append(sum(v))
+                if aggr_list[index] == 'count':
+                    for k, v in sorted(d_aggr(agg_field).items()):
+                        d_res[k].append(len([item for item in v if item]))
+            return d_res
