@@ -39,9 +39,9 @@ class myGroupBy():
             :return: diccionario
             """
 
-            def aggr_sum(agg_field):
+            def aggregator(agg_field):
                 """
-                :param  agg_field: campo que se va a agregar con la funcion sum
+                :param  agg_field: campo que se va a agregar
                 :return diccionario con las claves y los valores agrupados
                 """
                 from collections import defaultdict
