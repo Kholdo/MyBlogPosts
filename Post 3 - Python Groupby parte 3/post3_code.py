@@ -30,41 +30,59 @@ class myGroupBy():
         self.agg_fields = agg_fields
         self.aggr_list = aggr_list
 
-        def groupby_agg(self):
-            """
-            :param data: dataset de datos formato lista de diccionarios
-            :param groupby_fields: campo sobre el que agregar. Ejemplo: ['ZONA,'PLANTA',TIPO']
-            :param agg_fields: lista con los campos a agregar. Ejemplo: ['EQUIPO', 'KW_FRIO']
-            :param aggr_list: lista con las funciones de agregacion. Correspondientes con agg_fields. Ejemplo: ['count', 'sum']
-            :return: diccionario
-            """
+    def groupby_agg(self):
+        """
+        :param data: dataset de datos formato lista de diccionarios
+        :param groupby_fields: campo sobre el que agregar. Ejemplo: ['ZONA,'PLANTA',TIPO']
+        :param agg_fields: lista con los campos a agregar. Ejemplo: ['EQUIPO', 'KW_FRIO']
+        :param aggr_list: lista con las funciones de agregacion. Correspondientes con agg_fields. Ejemplo: ['count', 'sum']
+        :return: diccionario
+        """
 
-            def aggregator(agg_field):
-                """
-                :param  agg_field: campo que se va a agregar
-                :return diccionario con las claves y los valores agrupados
-                """
-                from collections import defaultdict
-                d_aggr = defaultdict(list)
-                for row in self.data:
-                    groupby_field_string = ''
-                    for field in self.groupby_fields:
-                        if groupby_field_string != '':
-                            groupby_field_string += '|' + row[field]
-                        else:
-                            groupby_field_string += row[field]
-                    d_aggr[groupby_field_string].append(row[agg_field])
-                return d_aggr
-
+        def aggregator(agg_field):
+            """
+            :param  agg_field: campo que se va a agregar
+            :return diccionario con las claves y los valores agrupados
+            """
             from collections import defaultdict
-            d_res = defaultdict(list)
-            for index, agg_field in enumerate(self.agg_fields):
-                if aggr_list[index] == 'sum':
-                    for k, v in sorted(d_aggr(agg_field).items()):
-                        if v is None:
-                            v = 0.0
-                        d_res[k].append(sum(v))
-                if aggr_list[index] == 'count':
-                    for k, v in sorted(d_aggr(agg_field).items()):
-                        d_res[k].append(len([item for item in v if item]))
-            return d_res
+            d_aggr = defaultdict(list)
+            for row in self.data:
+                groupby_field_string = ''
+                for field in self.groupby_fields:
+                    if groupby_field_string != '':
+                        groupby_field_string += '|' + row[field]
+                    else:
+                        groupby_field_string += row[field]
+                d_aggr[groupby_field_string].append(row[agg_field])
+            return d_aggr
+
+        from collections import defaultdict
+        d_res = defaultdict(list)
+        for index, agg_field in enumerate(self.agg_fields):
+            if aggr_list[index] == 'sum':
+                for k, v in sorted(aggregator(agg_field).items()):
+                    if v is None:
+                        v = 0.0
+                    d_res[k].append(sum(v))
+            if aggr_list[index] == 'count':
+                for k, v in sorted(aggregator(agg_field).items()):
+                    d_res[k].append(len([item for item in v if item]))
+        return d_res
+
+data = kw_cl_list
+groupby_fields = ['ZONA','PLANTA','TIPO']
+agg_fields = ['EQUIPO', 'KW_FRIO']
+aggr_list = ['count', 'sum']
+
+frioGroupBy = myGroupBy(data, groupby_fields,
+                            agg_fields, aggr_list)
+print (frioGroupBy)
+
+frioGroupedData = frioGroupBy.groupby_agg()
+
+print("{:<7}{:<9}{:<11}{:<15}{:<20}".format(
+    "ZONA", "PLANTA", "TIPO", "NUM_EQUIPOS", "SUMA KW FRIO"))
+for key in sorted(frioGroupedData .keys(), key=lambda key: key.split('|')[0]):
+    zona, planta, tipo = key.split('|')
+    print("{:<7}{:<9}{:<11}{:<15}{:<20}".format(
+        zona, planta, tipo, frioGroupedData [key][0], frioGroupedData [key][1]))
