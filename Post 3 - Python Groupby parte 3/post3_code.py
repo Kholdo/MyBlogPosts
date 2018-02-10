@@ -86,3 +86,11 @@ for key in sorted(frioGroupedData .keys(), key=lambda key: key.split('|')[0]):
     zona, planta, tipo = key.split('|')
     print("{:<7}{:<9}{:<11}{:<15}{:<20}".format(
         zona, planta, tipo, frioGroupedData [key][0], frioGroupedData [key][1]))
+
+#Con Pandas
+import pandas as pd
+df = pd.read_csv('potencias_frio.csv', sep=";", decimal=",")
+
+grouped_df = df.groupby(['ZONA','PLANTA','TIPO']).agg({'EQUIPO':'count', 'KW_FRIO':'sum'}).reset_index()
+grouped_df.columns = ['ZONA','PLANTA','TIPO','SUMA KW FRIO','NUM_EQUIPOS']
+print (grouped_df)
