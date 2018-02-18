@@ -26,16 +26,16 @@ for div_block in div:
     lego_stores_links = div_block.find_all("a", {"class": "btn-details"}, href=True)
     for link in lego_stores_links:
         print(link.get('href'))
-        store_ulr = link.get('href')
-        store_req = requests.get(store_ulr)
+        store_url = link.get('href')
+        store_req = requests.get(store_url)
         store_soup = BeautifulSoup(store_req.text, "html.parser")
         store_address = store_soup.find("address")
         link_address = store_address.contents[0].strip() + ' ' + store_address.contents[2].strip()
         if lego_store_country == 'China':
             link_address = link_address.encode('utf8')
-        lego_stores_list.append([lego_store_country, store_ulr, link_address])
+        lego_stores_list.append([lego_store_country, store_url, link_address])
 
-lego_stores_df = pd.DataFrame(lego_stores_list, columns=['country', 'store_ulr', 'address'])
+lego_stores_df = pd.DataFrame(lego_stores_list, columns=['country', 'store_url', 'address'])
 now = datetime.now()
 filename = 'Py_Lego_stores_%d%d%d.csv' % (now.year, now.month, now.day)
 lego_stores_df.to_csv(filename, sep=';', index=False, encoding='utf-8')
