@@ -9,7 +9,9 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
 * #### Post2 - Python Groupby parte 2 
    [Aquí](https://koldopina.com/2018/02/02/python-groupby-parte-2/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
    por varios campos, comparando Pandas y Python puro. 
-
+* #### Post3 - Python Groupby parte 3 
+   [Aquí](https://koldopina.com/2018/02/10/python-groupby-parte-3-3/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
+   por varios campos y de varios campos, utilizando diferentes funciones de agregación, comparando Pandas y Python puro. 
 
   
 
