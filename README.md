@@ -12,6 +12,8 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
 * #### Post3 - Python Groupby parte 3 
    [Aquí](https://koldopina.com/2018/02/10/python-groupby-parte-3-3/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
    por varios campos y de varios campos, utilizando diferentes funciones de agregación, comparando Pandas y Python puro. 
+* #### Post4 - Web Scraping con Beautiful Soup…y LEGO! 
+   [Aquí](https://koldopina.com/2018/02/18/web-scraping-con-beautiful-soup-y-lego) Web Scraping para obtener las direcciones de todas las tiendas de LEGO.
 
   
 
