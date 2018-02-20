@@ -3,17 +3,17 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
 ### [koldopina.com](https://koldopina.com/)
 
 
-* #### Post1 - Python Groupby parte 1 
-   [Aquí](https://koldopina.com/2018/01/27/python-groupby-parte-1/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
+* #### Post1 - Agrupando datos con Python…sin Pandas 
+   [Aquí](https://koldopina.com/agrupando-datos-con-python-sin-pandas/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
    por un único campo, comparando Pandas y Python puro.
-* #### Post2 - Python Groupby parte 2 
-   [Aquí](https://koldopina.com/2018/02/02/python-groupby-parte-2/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
+* #### Post2 - Más agrupaciones de datos en Python…sin Pandas 
+   [Aquí](https://koldopina.com/mas-agrupaciones-de-datos-en-python-sin-pandas/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
    por varios campos, comparando Pandas y Python puro. 
-* #### Post3 - Python Groupby parte 3 
-   [Aquí](https://koldopina.com/2018/02/10/python-groupby-parte-3-3/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
+* #### Post3 - Sin Pandas y a lo loco! 
+   [Aquí](https://koldopina.com/sin-pandas-y-a-lo-loco/) explico con un ejemplo sencillo cómo hacer agrupaciones de datos
    por varios campos y de varios campos, utilizando diferentes funciones de agregación, comparando Pandas y Python puro. 
 * #### Post4 - Web Scraping con Beautiful Soup…y LEGO! 
-   [Aquí](https://koldopina.com/2018/02/18/web-scraping-con-beautiful-soup-y-lego) Web Scraping para obtener las direcciones de todas las tiendas de LEGO.
+   [Aquí](https://koldopina.com/web-scraping-con-beautiful-soup-y-lego/) Web Scraping para obtener las direcciones de todas las tiendas de LEGO.
 
   
 
