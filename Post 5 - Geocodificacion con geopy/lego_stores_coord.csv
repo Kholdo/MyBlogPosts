@@ -1,0 +1,144 @@
+country;store_url;address;GOOGLE_address;latitude;longitude
+Austria;https://www.lego.com/en-us/stores/stores/at/vienna-scs;SHOPPING CITY SÜD, UNIT G103 2334 VÖSENDORF;Bahnhofpl. 164, 2334 Vösendorf, Austria;48.1093208;16.3172479
+Austria;https://www.lego.com/en-us/stores/stores/at/vienna-dz;WAGRAMER STRAßE 81, #928B 1220 VIENNA;Wagramer Str. 81/928b, 1220 Wien, Austria;48.2423608;16.4349903
+Belgium;https://www.lego.com/en-us/stores/stores/be/wijnegem;SPACE 526, TURNHOUTSEBAAN 5 2110 WIJNEGEM;Turnhoutsebaan 5, 2110 Wijnegem, Belgium;51.2231142;4.5004884
+Canada;https://www.lego.com/en-us/stores/stores/ca/southgate;5015-111 ST NW SPACE #424 EDMONTON AB T6H 4M6;5015 111 St #424, Edmonton, AB T6H 4M6, Canada;53.4854969;-113.5137132
+Canada;https://www.lego.com/en-us/stores/stores/ca/guildford;10355 152 STREET SURREY BC V3R 7C1;10355 152 St, Surrey, BC V3R 7C1, Canada;49.1904168;-122.803713
+Canada;https://www.lego.com/en-us/stores/stores/ca/oakridge-centre;650 WEST 41st AVE, SPACE 175 VANCOUVER BC V5Z 2M9;650 W 41st Ave, Vancouver, BC V5Z 2M9, Canada;49.2319166;-123.1179691
+Canada;https://www.lego.com/en-us/stores/stores/ca/polo-park;1485 PORTAGE AVE, UNIT 0210A WINNIPEG MB R3G 0W4;1485 Portage Ave #0210a, Winnipeg, MB R3G 0W4, Canada;49.8839383;-97.1988147
+Canada;https://www.lego.com/en-us/stores/stores/ca/fairview-mall;1800 SHEPPARD AVE EAST TORONTO ON M2J 5A7;1800 Sheppard Ave E, North York, ON M2J 5A7, Canada;43.7779901;-79.3440914
+Canada;https://www.lego.com/en-us/stores/stores/ca/sherway-gardens;25 THE WEST MALL - #1066 TORONTO ON M9C 1B8;25 The West Mall #1066, Etobicoke, ON M9C 1B8, Canada;43.6116933;-79.557183
+Canada;https://www.lego.com/en-us/stores/stores/ca/yorkdale;1 YORKDALE ROAD, UNIT 84 TORONTO ON M6A 3A1;1 Yorkdale Rd #84, North York, ON M6A 3A1, Canada;43.7268682;-79.45116089999999
+Canada;https://www.lego.com/en-us/stores/stores/ca/carrefour-laval;3035 BOULEVARD LE CARREFOUR LAVAL QC H7T 1C8;3035 Boulevard le Carrefour, Laval, QC H7T 1C8, Canada;45.5702063;-73.7519628
+Canada;https://www.lego.com/en-us/stores/stores/ca/fairview-pointe-claire;6801 TRANS-CANADA HWY POINTE CLAIRE QC H9R 5J2;6801 Route Transcanadienne, Pointe-Claire, QC H9R 5J2, Canada;45.4640679;-73.8304813
+Denmark;https://www.lego.com/en-us/stores/stores/dk/copenhagen;VIMMELSKAFTET 37 COPENHAGEN 1161;Vimmelskaftet 37, 1161 København, Denmark;55.67854519999999;12.5758971
+Denmark;https://www.lego.com/en-us/stores/stores/dk/lego-house-billund;OLE KIRKS PLADS 1 BILLUND 7190;Ole Kirks Vej 1, 7190 Billund, Denmark;55.7327138;9.1140806
+France;https://www.lego.com/en-us/stores/stores/fr/bordeaux-ste-catherine;RUE GUIRAUDE BORDEAUX 33000;Rue Guiraude, 33000 Bordeaux, France;44.8395425;-0.575019
+France;https://www.lego.com/en-us/stores/stores/fr/clermont-ferrand;CENTRE JAUDE CLERMONT-FERRAND 63000;18 Rue d'Allagnat, 63000 Clermont-Ferrand, France;45.7746867;3.0824322
+France;https://www.lego.com/en-us/stores/stores/fr/disneyland;DISNEY VILLAGE CHESSY 77700;Disney Village, 77700 Chessy, France;48.8693254;2.7844824
+France;https://www.lego.com/en-us/stores/stores/fr/lille;CENTRE COMMERCIAL EURALILLE LILLE 59800;100 Avenue Willy Brandt, 59777 Lille, France;50.6372405;3.0737471
+France;https://www.lego.com/en-us/stores/stores/fr/lyon-la-part-dieu;17 RUE DU DOCTEUR BOUCHUT LYON 69003;17 Rue du Dr Bouchut, 69003 Lyon, France;45.7615628;4.8559895
+France;https://www.lego.com/en-us/stores/stores/fr/paris-les-halles;1, PASSAGE DE LA CANOPÉE PARIS 75001;1 Passage de la Canopée, 75001 Paris, France;48.86155309999999;2.3474899
+France;https://www.lego.com/en-us/stores/stores/fr/so-ouest;CENTRE COMMERCIAL SO OUEST LEVALLOIS-PERRET 92300;31 Rue d'Alsace, 92300 Levallois-Perret, France;48.8927665;2.2975304
+Germany;https://www.lego.com/en-us/stores/stores/de/berlin;TAUENTZIENSTRAßE 20 BERLIN 10789;Tauentzienstraße 20, 10789 Berlin, Germany;52.50228;13.3401633
+Germany;https://www.lego.com/en-us/stores/stores/de/essen;LIMBECKERSTRAßE 25 ESSEN 45127;Limbecker Str. 25, 45127 Essen, Germany;51.4573685;7.010162599999999
+Germany;https://www.lego.com/en-us/stores/stores/de/frankfurt;MYZEIL EINKAUFSZENTRUM FRANKFURT 60313;Zeil 106, 60313 Frankfurt am Main, Germany;50.1143519;8.6814498
+Germany;https://www.lego.com/en-us/stores/stores/de/hamburg;SPITALERSTRAßE 12 HAMBURG 20095;Spitalerstraße 10-12, 20095 Hamburg, Germany;53.5522836;10.003281
+Germany;https://www.lego.com/en-us/stores/stores/de/koeln;HOHE STRASSE 68-82 KÖLN 50667;Hohe Str. 68, 50667 Köln, Germany;50.9371058;6.956613
+Germany;https://www.lego.com/en-us/stores/stores/de/leipzig;HÖFE AM BRÜHL LEIPZIG 04109;Brühl 1, 04109 Leipzig, Germany;51.3434296;12.3747145
+Germany;https://www.lego.com/en-us/stores/stores/de/muenchen-riem;RIEM ARKARDEN MÜNCHEN 81829;Willy-Brandt-Platz 5, 81829 München, Germany;48.1318839;11.691021
+Germany;https://www.lego.com/en-us/stores/stores/de/muenchen-pasing;PASING ARCADEN MÜNCHEN 81241;Pasinger Bahnhofspl. 5, 81241 München, Germany;48.1483003;11.4638533
+Germany;https://www.lego.com/en-us/stores/stores/de/nuernberg;BREITE GASSE 39 NÜRNBERG 90402;Breite G. 39, 90402 Nürnberg, Germany;49.44996949999999;11.0753333
+Germany;https://www.lego.com/en-us/stores/stores/de/oberhausen;CENTRO EINKAUFZENTRUM OBERHAUSEN 46047;Centroallee 555, 46047 Oberhausen, Germany;51.490188;6.8790825
+Germany;https://www.lego.com/en-us/stores/stores/de/saarbruecken;BAHNHOFSTRAßE 77 SAARBRÜCKEN 66111;Bahnhofstraße 77, 66111 Saarbrücken, Germany;49.2366587;6.9922843
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-arese;Centro Commerciale II Centro, Via Giuseppe Eugenio Luraghi, 11, Arese 20020;Via Giuseppe Eugenio Luraghi, 11, 20020 Arese MI, Italy;45.56338909999999;9.052476799999999
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-bergamo;Centro Commerciale Orio Center, Via Portico, 71, Orio al Serio 24050;Via Portico, 71, 24050 Orio al Serio BG, Italy;45.66421949999999;9.694914299999999
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-carugate;Centro Commerciale Carosello, Strada Provinciale 208, km 2, Carugate 20061;SP208, km 2, 20061 Carugate MI, Italy;45.54622519999999;9.329108399999999
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-euroma-2;Centro Commerciale Euroma 2, Viale dell'Oceano Pacifico, 83, Roma 00144;Viale dell'Oceano Pacifico, 83, 00144 Roma RM, Italy;41.81707300000001;12.4595669
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-marcianise;Centro Commerciale Campania, Località Aurno, 87, Marcianise 81025;S.S. Sannitica 87, 81025 Loc. Aurno, Marcianise CE, Italy;41.00376989999999;14.3280957
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-marghera;Centro Commerciale Nave De Vero, Via Pietro Arduino, 20, Venezia 30175;Via Pietro Arduino, 20, 30175 Venezia VE, Italy;45.4595237;12.2125422
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-milano-monforte;Corso Monforte 2, angolo Piazza San Babila , Milano 20122 ;Piazza S. Babila, 20121 Milano MI, Italy;45.4668206;9.1977583
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-palermo;Centro Commerciale Palermo Forum, Via Filippo Pecoraino, Palermo 90100;Via Filippo Pecoraino, 90124 Palermo PA, Italy;38.0890315;13.4113672
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-porta-di-roma;Galleria Commerciale Porta di Roma, Via Alberto Lionello, 201, Roma 139;Via Alberto Lionello, 201, 00139 Roma RM, Italy;41.972031;12.540876
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-roma-tomacelli;Via Tomacelli 142, Roma 186 ;Via Tomacelli, 142, 00186 Roma RM, Italy;41.9048232;12.4774606
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-torino;Centro Commerciale Le Gru, Via Crea, 10, Grugliasco 10095;Via Crea, 10, 10095 Grugliasco TO, Italy;45.05632;7.612633400000001
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-torino-carlo-felice;Via Roma 367, angolo piazza Carlo Felice, Torino 10123;Piazza Carlo Felice, 10123 Torino TO, Italy;45.06424029999999;7.680061599999998
+Italy;https://www.lego.com/en-us/stores/stores/it/lego-certified-store-verona;Centro Commerciale Verona Adigeo, Viale delle Nazioni, 1, Verona 37135;Viale delle Nazioni, 1, 37135 Verona VR, Italy;45.40608839999999;10.9768653
+Sweden;https://www.lego.com/en-us/stores/stores/se/stockholm;RÅSTA STRANDVÄGEN 19 169 56 SOLNA;Råsta Strandväg 19, 169 79 Solna, Sweden;59.3736804;17.9956914
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/bluewater;BLUEWATER SHOPPING CENTRE DA9 9SR GREENHITHE;Bluewater Pkwy, Dartford, Greenhithe DA9 9ST, UK;51.438814;0.2709928
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/brighton;CHURCHILL SQ SHOPPING CTR BN1 2TF BRIGHTON;Churchill Square Shopping Centre, Russell Pl, Brighton BN1 2RG, UK;50.822623;-0.1455925
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/cardiff;ST DAVIDS DEWI SANT CF10 2EF CARDIFF;St Davids Dewi Sant, Cardiff CF10 2EW, UK;51.48024479999999;-3.1755714
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/glasgow;220 BUCHANAN ST G1 2FF GLASGOW;1 / 2, 220 Buchanan St, Glasgow G1 2FF, UK;55.8644605;-4.2526418
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/leeds;ALBION STREET, UNTI 3.12 LS1 5AT LEEDS;3 Albion St, Leeds LS1, UK;53.7961787;-1.5450537
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/liverpool;LIVERPOOL ONE SHOPPING CTR L1 8BJ LIVERPOOL;Liverpool One Shopping Centre, 19 S John St, Liverpool L1 8BU, UK;53.4038023;-2.9869317
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/london-leicester-square;3 SWISS COURT W1D 6AP LONDON;3 Swiss Ct, London W1D 6AP, UK;51.5104258;-0.1309333
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/london-stratford;WESTFIELD STRATFORD CITY E20 1EH WESTFIELD STRATFORD CITY;Montfichet Rd, London E20 1EJ, UK;51.5431462;-0.007235399999999999
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/london-westfield;ARIEL WAY, SHEPHERD'S BUSH W12 7GF LONDON;Ariel Way, White City, London W12 7SL, UK;51.5091388;-0.2215622
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/manchester;ARNDALE SHOPPING CENTRE M4 3AQ MANCHESTER;Manchester M4 1AZ, UK;53.4831556;-2.2412102
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/milton-keynes;33 MIDSUMMER PLACE MK9 3GB MILTON KEYNES;33 Midsummer Blvd, Milton Keynes MK9 3GB, UK;52.0410084;-0.7571565
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/metro-centre-newcastle;UNIT 73, METROCENTRE NE11 9YG GATESHEAD;Metrocentre, Gateshead NE11 9YG, UK;54.9568771;-1.6688983
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/sheffield;MEADOWHALL SHOPPING CENTRE S9 1EP SHEFFIELD;Sheffield S9 1EP, UK;53.41415869999999;-1.4107775
+United Kingdom;https://www.lego.com/en-us/stores/stores/uk/watford;INTU WATFORD WD17 2UB WATFORD;Queen's Rd, Watford WD17 2UB, UK;51.655357;-0.3936
+USA;https://www.lego.com/en-us/stores/stores/us/riverchase-galleria-mall;3000  RIVERCHASE GALLERIA #166 BIRMINGHAM AL 35244-2319;3000 Riverchase Galleria #166, Birmingham, AL 35244, USA;33.3789976;-86.8083643
+USA;https://www.lego.com/en-us/stores/stores/us/arrowhead-towne-ctr;7700 W. ARROWHEAD TOWNE CTR GLENDALE AZ 85308;7700 W Arrowhead Towne Center, Glendale, AZ 85308, USA;33.6420644;-112.2252092
+USA;https://www.lego.com/en-us/stores/stores/us/chandler-fashion-center;3111 W. CHANDLER BLVD CHANDLER AZ 85226-5071;3111 W Chandler Blvd, Chandler, AZ 85226, USA;33.3014704;-111.8984059
+USA;https://www.lego.com/en-us/stores/stores/us/arden-fair-mall;1689 ARDEN WAY - SPACE 2170 SACRAMENTO CA 95815-4030;1689 Arden Way, Sacramento, CA 95815, USA;38.6008984;-121.4265998
+USA;https://www.lego.com/en-us/stores/stores/us/anaheim;1585 S. DISNEYLAND DR ANAHEIM CA 92802-2320;1585 Disneyland Dr, Anaheim, CA 92802, USA;33.8088286;-117.9243967
+USA;https://www.lego.com/en-us/stores/stores/us/fashion-valley;7007 FRIARS ROAD, SPACE 965A SAN DIEGO CA 92108-1199;7007 Friars Rd, San Diego, CA 92108, USA;32.7691647;-117.1655824
+USA;https://www.lego.com/en-us/stores/stores/us/glendale-galleria;2130 GLENDALE GALLERIA GLENDALE CA 91210-2101;2130 Galleria Way, Glendale, CA 91210, USA;34.1451598;-118.2583508
+USA;https://www.lego.com/en-us/stores/stores/us/hillsdale-shopping-center;341 HILLSDALE MALL SAN MATEO CA 94403-3426;341 W Hillsdale Blvd, San Mateo, CA 94403, USA;37.53285899999999;-122.3062476
+USA;https://www.lego.com/en-us/stores/stores/us/ontario-mills;1 MILLS CIR STE 631 ONTARIO CA 91764-5255;1 Mills Cir #631, Ontario, CA 91764, USA;34.0731851;-117.5568265
+USA;https://www.lego.com/en-us/stores/stores/us/south-coast-plaza;3333 BRISTOL STREET, SPC 1042 COSTA MESA CA 92626-1813;3333 Bristol St, Costa Mesa, CA 92626, USA;33.6910554;-117.8879158
+USA;https://www.lego.com/en-us/stores/stores/us/stoneridge-shopping-center;1444 STONERIDGE MALL, D117A PLEASANTON CA 94588-3215;Space D117A, 1444 Stoneridge Mall Rd, Pleasanton, CA 94588, United States;37.6946998;-121.9287024
+USA;https://www.lego.com/en-us/stores/stores/us/the-shops-at-mission-viejo;555 THE SHOPS AT MISSION VIEJO MISSION VIEJO CA 92691-6514;555 Shops At Mission Viejo, Mission Viejo, CA 92691, USA;33.55863350000001;-117.66804
+USA;https://www.lego.com/en-us/stores/stores/us/san-francisco;865 MARKET STREET SPC C41 SAN FRANCISCO CA 94103-1953;865 Market St, San Francisco, CA 94103, USA;37.7840569;-122.4061984
+USA;https://www.lego.com/en-us/stores/stores/us/topanga;6600  TOPANGA CANYON BLVD CANOGA PARK CA 91303;6600 Topanga Canyon Blvd, Canoga Park, CA 91303, USA;34.1854234;-118.6045534
+USA;https://www.lego.com/en-us/stores/stores/us/san-diego;4545 LA JOLLA VILLAGE DRIVE SAN DIEGO CA 92122;4545 La Jolla Village Dr, San Diego, CA 92122, USA;32.8709699;-117.2095369
+USA;https://www.lego.com/en-us/stores/stores/us/valley-fair;2855 STEVENS CREEK BLVD SANTA CLARA CA 95050-6709;2855 Stevens Creek Blvd, Santa Clara, CA 95050, USA;37.3255657;-121.9450002
+USA;https://www.lego.com/en-us/stores/stores/us/colorado-mills;14500 W COLFAX AVE LAKEWOOD CO 80401-3203;14500 W Colfax Ave, Golden, CO 80401, USA;39.7315952;-105.1585621
+USA;https://www.lego.com/en-us/stores/stores/us/park-meadows;8401 PARK MEADOWS CTR DR #1175 LONE TREE CO 80124-5128;8401 Park Meadows Center Dr #1175, Lone Tree, CO 80124, USA;39.5617732;-104.8748846
+USA;https://www.lego.com/en-us/stores/stores/us/danbury-fair;7 BACKUS AVE DANBURY CT 06810;Danbury Fair Mall, 7 Backus Ave, Danbury, CT 06810, USA;41.3800517;-73.4817327
+USA;https://www.lego.com/en-us/stores/stores/us/westfarms-mall;1500 NEW BRITAIN AVENUE WEST HARTFORD CT 06110;1500 New Britain Ave, West Hartford, CT 06110, USA;41.7230942;-72.7617619
+USA;https://www.lego.com/en-us/stores/stores/us/christiana-mall;132 CHRISTIANA MALL, #1547 NEWARK DE 19702-3202;132 Christiana Mall, Newark, DE 19702, USA;39.6785388;-75.65215359999999
+USA;https://www.lego.com/en-us/stores/stores/us/aventura-mall;19575 BISCAYNE BLVD, RM 353 MIAMI FL 33180-2331;19575 Biscayne Blvd, Aventura, FL 33180, USA;25.9569172;-80.1426242
+USA;https://www.lego.com/en-us/stores/stores/us/orlando;1672 E BUENA VISTA DR LAKE BUENA VISTA FL 32830-8401;1672 Buena Vista Dr, Orlando, FL 32836, USA;28.371292;-81.5158392
+USA;https://www.lego.com/en-us/stores/stores/us/sawgrass-mills;12801 W SUNRISE BLVD, SP. 1011 SUNRISE FL 33323-4007;12801 W Sunrise Blvd #1011, Sunrise, FL 33323, USA;26.1515406;-80.3205574
+USA;https://www.lego.com/en-us/stores/stores/us/north-point-mall;1000 NORTH POINT CIRCLE  #1150 ALPHARETTA GA 30022-4853;1000 North Point Cir #1150, Alpharetta, GA 30022, USA;34.0471436;-84.29512679999999
+USA;https://www.lego.com/en-us/stores/stores/us/sugarloaf-mills;5900 SUGARLOAF PKWY LAWRENCEVILLE GA 30043-7854;5900 Sugarloaf Pkwy, Lawrenceville, GA 30043, USA;33.9808337;-84.0807159
+USA;https://www.lego.com/en-us/stores/stores/us/ala-moana-center;1450 ALA MOANA BLVD STE 2032 HONOLULU HI 96814-4614;1450 Ala Moana Blvd #2032, Honolulu, HI 96814, USA;21.2903244;-157.8427068
+USA;https://www.lego.com/en-us/stores/stores/us/gurnee-mills;6170 W GRAND AVE GURNEE IL 60031;6170 W Grand Ave, Gurnee, IL 60031, USA;42.3834464;-87.95524759999999
+USA;https://www.lego.com/en-us/stores/stores/us/northbrook-court;2024 NORTHBROOK CT NORTHBROOK IL 60062-1411;2024 Northbrook Ct, Northbrook, IL 60062, USA;42.1518443;-87.8170583
+USA;https://www.lego.com/en-us/stores/stores/us/orland-square;732 ORLAND SQUARE ORLAND PARK IL 60462-3221;732 Orland Square Dr, Orland Park, IL 60462, USA;41.6197241;-87.8489594
+USA;https://www.lego.com/en-us/stores/stores/us/water-tower-place;835 N MICHIGAN AVE CHICAGO IL 60611-2193;835 N Michigan Ave, Chicago, IL 60611, USA;41.8979672;-87.62355939999999
+USA;https://www.lego.com/en-us/stores/stores/us/woodfield-mall;5 WOODFIELD MALL SCHAUMBURG IL 60173-5012;5 Woodfield Mall, Schaumburg, IL 60173, USA;42.0464358;-88.0369224
+USA;https://www.lego.com/en-us/stores/stores/us/castleton-square;6020 E 82ND ST INDIANAPOLIS IN 46250-5508;6020 E 82nd St, Indianapolis, IN 46250, USA;39.9092285;-86.06538619999999
+USA;https://www.lego.com/en-us/stores/stores/us/oak-park-mall;11149 WEST 95TH STREET,  # 18A OVERLAND PARK KS 66214-1824;11149 W 95th St #18a, Overland Park, KS 66214, USA;38.9536069;-94.7202709
+USA;https://www.lego.com/en-us/stores/stores/us/burlington-mall;75 MIDDLESEX TPKE BURLINGTON MA 01803-5389;75 Middlesex Turnpike, Burlington, MA 01803, USA;42.482354;-71.21367459999999
+USA;https://www.lego.com/en-us/stores/stores/us/natick-collection;1245 WORCESTER ST NATICK MA 01760-1515;1245 Worcester St, Natick, MA 01760, USA;42.301113;-71.3819171
+USA;https://www.lego.com/en-us/stores/stores/us/northshore-mall;210 ANDOVER STREET, SPACE 169C PEABODY MA 01960-1647;210 Andover St, Peabody, MA 01960, USA;42.5412609;-70.94396640000001
+USA;https://www.lego.com/en-us/stores/stores/us/south-shore-plaza;250 GRANITE ST. - SPACE 1064 BRAINTREE MA 02184-2804;250 Granite St, Braintree, MA 02184, USA;42.22172219999999;-71.0220568
+USA;https://www.lego.com/en-us/stores/stores/us/arundel-mills;7000 ARUNDEL MILLS CIR STE 420 HANOVER MD 21076-1293;7000 Arundel Mills Cir #420, Hanover, MD 21076, USA;39.1573631;-76.7252493
+USA;https://www.lego.com/en-us/stores/stores/us/westfield-annapolis;1260 ANNAPOLIS MALL ANNAPOLIS MD 21401-3075;1260 Annapolis Mall Rd, Annapolis, MD 21401, USA;38.9888361;-76.5481638
+USA;https://www.lego.com/en-us/stores/stores/us/the-somerset-collection;2800 W BIG BEAVER RD STE V-352 TROY MI 48084-3234;2800 W Big Beaver Rd #352, Troy, MI 48084, USA;42.5627151;-83.18404149999999
+USA;https://www.lego.com/en-us/stores/stores/us/mall-of-america;164 SOUTH AVENUE BLOOMINGTON MN 55425-5525;164 South Avenue, Bloomington, MN 55425, USA;44.8532588;-93.2424856
+USA;https://www.lego.com/en-us/stores/stores/us/west-county;55 WEST COUNTY CENTER DES PERES MO 63131-3701;55 W County Center Dr, Des Peres, MO 63131, USA;38.6023854;-90.4480288
+USA;https://www.lego.com/en-us/stores/stores/us/concord-mills;8111 CONCORD MILLS BLVD STE206 CONCORD NC 28027-6468;8111 Concord Mills Boulevard #206, Concord, NC 28027, USA;35.3700689;-80.7239298
+USA;https://www.lego.com/en-us/stores/stores/us/crabtree-mall;4325 GLENWOOD AVE STE 1078 RALEIGH NC 27612-4520;4325 Glenwood Ave #1078, Raleigh, NC 27612, USA;35.8400058;-78.6791806
+USA;https://www.lego.com/en-us/stores/stores/us/southpark;4400 SHARON ROAD, UNIT M-05 CHARLOTTE NC 28211-3531;4400 Sharon Rd #05, Charlotte, NC 28211, USA;35.1522311;-80.8318968
+USA;https://www.lego.com/en-us/stores/stores/us/bridgewater-commons;400 COMMONS WAY BRIDGEWATER NJ 08807-2800;400 Commons Way, Bridgewater, NJ 08807, USA;40.5863872;-74.6199134
+USA;https://www.lego.com/en-us/stores/stores/us/cherry-hill;2000 RTE 38 UNIT 1095 CHERRY HILL NJ 08002-2122;2000 NJ-38 #1095, Cherry Hill, NJ 08002, USA;39.9418533;-75.0261976
+USA;https://www.lego.com/en-us/stores/stores/us/raceway;3710 ROUTE 9 FREEHOLD NJ 07728-4800;3710 U.S. 9, Freehold, NJ 07728, USA;40.2533021;-74.2995282
+USA;https://www.lego.com/en-us/stores/stores/us/jersey-gardens;651 KAPKOWSKI ROAD, #1462 ELIZABETH NJ 07201-4934;651 Kapkowski Rd #1462, Elizabeth, NJ 07201, USA;40.6601883;-74.1713372
+USA;https://www.lego.com/en-us/stores/stores/us/westfield-garden-state-plaza;1 GARDEN STATE PLAZA PARAMUS NJ 07652-2404;1 Garden State Plaza Blvd, Paramus, NJ 07652, USA;40.914712;-74.075363
+USA;https://www.lego.com/en-us/stores/stores/us/fashion-show;3200 SOUTH LAS VEGAS BLVD LAS VEGAS NV 89109;3200 S Las Vegas Blvd, Las Vegas, NV 89109, USA;36.1277253;-115.1744147
+USA;https://www.lego.com/en-us/stores/stores/us/eastview;7979 PITTSFORD VICTOR RD,131B VICTOR NY 14564;7979 Pittsford Victor Rd, Victor, NY 14564, USA;43.0299449;-77.44371129999999
+USA;https://www.lego.com/en-us/stores/stores/us/flatiron-district;200 5TH AVENUE NEW YORK NY 10010-3302;Fifth Avenue Hotel, 200 5th Ave, New York, NY 10010, USA;40.74199309999999;-73.98993570000002
+USA;https://www.lego.com/en-us/stores/stores/us/palisades-center;3462 PALISADES CENTER DR WEST NYACK NY 10994-6604;3462 Palisades Center Dr, West Nyack, NY 10994, USA;41.0989165;-73.9549139
+USA;https://www.lego.com/en-us/stores/stores/us/queens-center;90-15 QUEENS BLVD STE 1076 ELMHURST NY 11373-4913;90-15 Queens Blvd #1076, Queens, NY 11373, USA;40.7344896;-73.8705201
+USA;https://www.lego.com/en-us/stores/stores/us/rockefeller-center;620 FIFTH AVENUE @ 50TH STREET NEW YORK NY 10020-2402;W 50th St & 5th Ave, New York, NY 10022, USA;40.7585378;-73.9771928
+USA;https://www.lego.com/en-us/stores/stores/us/roosevelt-field;630 OLD COUNTRY RD UNIT 1057 GARDEN CITY NY 11530-3470;630 Old Country Rd #1057, Garden City, NY 11530, USA;40.7383708;-73.6131462
+USA;https://www.lego.com/en-us/stores/stores/us/staten-island-mall;2655 RICHMOND AVE, UNIT 1285 NEW YORK NY 10314;2655 Richmond Ave #1285, Staten Island, NY 10314, USA;40.582418;-74.1659155
+USA;https://www.lego.com/en-us/stores/stores/us/westchester;125 WESTCHESTER AVE WHITE PLAINS NY 10601-4522;125 Westchester Ave, White Plains, NY 10601, USA;41.0315151;-73.7585505
+USA;https://www.lego.com/en-us/stores/stores/us/beachwood-place;26300 CEDAR RD BEACHWOOD OH 44122-1160;26300 Cedar Rd, Beachwood, OH 44122, USA;41.49848799999999;-81.4941423
+USA;https://www.lego.com/en-us/stores/stores/us/easton-town-center;4004 GRAMERCY ST COLUMBUS OH 43219-6133;4004 Gramercy St, Columbus, OH 43219, USA;40.05192;-82.9151397
+USA;https://www.lego.com/en-us/stores/stores/us/kenwood-towne-centre;7875 MONTGOMERY RD SPC 2109 CINCINNATI OH 45236-4380;7875 Montgomery Rd, Cincinnati, OH 45236, USA;39.2018097;-84.37779549999999
+USA;https://www.lego.com/en-us/stores/stores/us/penn-square-mall;1901 NW EXPRESSWAY STE 1058B OKLAHOMA CITY OK 73118-9217;1901 Northwest Expy #1058b, Oklahoma City, OK 73118, USA;35.5246909;-97.5440106
+USA;https://www.lego.com/en-us/stores/stores/us/washington-square;9410 SW WASHINGTON SQ RD #K11 TIGARD OR 97223-4447;9410 SW Washington Square Rd, Portland, OR 97223, USA;45.4513239;-122.7805098
+USA;https://www.lego.com/en-us/stores/stores/us/king-of-prussia-mall;160 N. GULPH RD - SPACE 1150 KING OF PRUSSIA PA 19406-2911;160 N Gulph Rd, King of Prussia, PA 19406, USA;40.0879055;-75.3897629
+USA;https://www.lego.com/en-us/stores/stores/us/providence-place;97 PROVIDENCE PLACE, UNIT 3165 PROVIDENCE RI 02903-1752;97 Providence Pl #3165, Providence, RI 02903, USA;41.826495;-71.416848
+USA;https://www.lego.com/en-us/stores/stores/us/opry-mills;416 OPRY MILLS DRIVE, SP #220 NASHVILLE TN 37214-2443;416 Opry Mills Dr #220, Nashville, TN 37214, USA;36.2014701;-86.6920581
+USA;https://www.lego.com/en-us/stores/stores/us/barton-creek-square;2901 S CAPITAL OF TEXAS HWY AUSTIN TX 78746;2901 S Capital of Texas Hwy, Austin, TX 78746, USA;30.2573391;-97.8071884
+USA;https://www.lego.com/en-us/stores/stores/us/baybrook-mall;500 BAYBROOK MALL FRIENDSWOOD TX 77546-2751;500 Baybrook Mall Dr, Friendswood, TX 77546, USA;29.5421287;-95.1486218
+USA;https://www.lego.com/en-us/stores/stores/us/north-star;7400 SAN PEDRO AVE. SAN ANTONIO TX 78216-5399;7400 San Pedro Ave, San Antonio, TX 78216, USA;29.5188576;-98.49560740000001
+USA;https://www.lego.com/en-us/stores/stores/us/north-park-center;8687 N CENTRAL EXPY STE 770 DALLAS TX 75225-4565;8687 N Central Expy #770, Dallas, TX 75225, USA;32.8685678;-96.77449519999999
+USA;https://www.lego.com/en-us/stores/stores/us/stonebriar-centre;2601 PRESTON RD STE 1222 FRISCO TX 75034-9472;2601 Preston Rd #1222, Frisco, TX 75034, USA;33.0991992;-96.81132
+USA;https://www.lego.com/en-us/stores/stores/us/houston-galleria;5015 WESTHEIMER, SUITE A3319 HOUSTON TX 77056-5602;5015 Westheimer Rd a3319, Houston, TX 77056, USA;29.7391116;-95.4634682
+USA;https://www.lego.com/en-us/stores/stores/us/the-woodlands-mall;1201 LAKE WOODLANDS DR # 01182 THE WOODLANDS TX 77380-5007;1201 Lake Woodlands Dr, The Woodlands, TX 77380, USA;30.1644114;-95.455586
+USA;https://www.lego.com/en-us/stores/stores/us/fashion-place;6191 SOUTH STATE STREET MURRAY UT 84107;6191 State St, Murray, UT 84107, USA;40.6381459;-111.8887915
+USA;https://www.lego.com/en-us/stores/stores/us/pentagon-city;1100 S HAYES STREET,SP 0G07B ARLINGTON VA 22202-4907;1100 S Hayes St, Arlington, VA 22202, USA;38.86300809999999;-77.0610665
+USA;https://www.lego.com/en-us/stores/stores/us/potomac-mills-mall;2700 POTOMAC MILLS CIR STE 767 WOODBRIDGE VA 22192-4673;2700 Potomac Mills Cir #767, Woodbridge, VA 22192, USA;38.6433621;-77.29618289999999
+USA;https://www.lego.com/en-us/stores/stores/us/tysons-corner;7966 TYSONS CORNER CTR MCLEAN VA 22102-4500;7966 Tysons Corner Center, McLean, VA 22102, USA;38.9172362;-77.2217387
+USA;https://www.lego.com/en-us/stores/stores/us/alderwood;3000 184TH STREET SW, #428 LYNNWOOD WA 98037-4770;3000 184th St SW #428, Lynnwood, WA 98037, USA;47.8299542;-122.2725709
+USA;https://www.lego.com/en-us/stores/stores/us/bellevue-square-mall;119 BELLEVUE SQUARE BELLEVUE WA 98004-5021;119 Bellevue Square, Bellevue, WA 98004, USA;47.6151275;-122.203095
+USA;https://www.lego.com/en-us/stores/stores/us/westfield-southcenter;633 SOUTH CENTER, UNIT 1450 SEATTLE WA 98188-2875;633 Southcenter Mall #1450, Seattle, WA 98188, USA;47.4580485;-122.2580666
+USA;https://www.lego.com/en-us/stores/stores/us/mayfair;2500 N. MAYFAIR RD, SPACE 0635 WAUWATOSA WI 53226-1409;2500 N Mayfair Rd, Wauwatosa, WI 53226, USA;43.06383530000001;-88.0445613
