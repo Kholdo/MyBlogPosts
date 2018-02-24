@@ -12,3 +12,14 @@ from geopy.geocoders import GoogleV3
 df = pd.read_csv('Py_Lego_stores_2018218.csv', sep=";")
 
 
+def geolego(row):
+    address_src = row['address']
+    print(row['country'])
+    if row['country'] == 'China':
+        address_src = eval(address_src).decode('utf-8')
+    try:
+        address, (latitude, longitude) = geolocator.geocode(address_src, timeout=15)
+    except TypeError:
+        address, latitude, longitude = 'TypeError', -91, -181
+    print(address, latitude, longitude)
+    return pd.Series({"GOOGLE_address": address, "latitude": latitude, "longitude": longitude})
