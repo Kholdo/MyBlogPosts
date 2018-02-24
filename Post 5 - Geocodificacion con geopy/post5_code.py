@@ -26,3 +26,8 @@ def geolego(row):
 
 
 df[['GOOGLE_address', 'latitude', 'longitude']] = df.apply(geolego, axis=1)
+
+df = df[df.GOOGLE_address != 'TypeError']
+print(df.head())
+
+df.to_csv('lego_stores_coord.csv', sep=';', index=False, encoding='utf-8')
