@@ -10,3 +10,5 @@ import pandas as pd
 from geopy.geocoders import GoogleV3
 
 df = pd.read_csv('Py_Lego_stores_2018218.csv', sep=";")
+
+
