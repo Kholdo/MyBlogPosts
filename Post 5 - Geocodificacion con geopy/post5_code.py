@@ -23,3 +23,6 @@ def geolego(row):
         address, latitude, longitude = 'TypeError', -91, -181
     print(address, latitude, longitude)
     return pd.Series({"GOOGLE_address": address, "latitude": latitude, "longitude": longitude})
+
+
+df[['GOOGLE_address', 'latitude', 'longitude']] = df.apply(geolego, axis=1)
