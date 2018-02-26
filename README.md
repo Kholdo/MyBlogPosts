@@ -16,5 +16,3 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
    [Aquí](https://koldopina.com/web-scraping-con-beautiful-soup-y-lego/) Web Scraping para obtener las direcciones de todas las tiendas de LEGO.
 * #### Post5 - Geopy: geoposiciona las bases rebeldes con Python, Qlik Sense… y LEGO!
     [Aquí]( https://koldopina.com/geoposicionando-python-geopy-qlik-sense/) Geoposicionamiento de las tiendas de LEGO con geopy y Qlik Sense.
-  
-
