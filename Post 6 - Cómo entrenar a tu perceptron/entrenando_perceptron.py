@@ -38,3 +38,12 @@ plt.show()
 #Dividimos el dataframe en train y test
 X, y = df.loc[:, ['feature1', 'feature2']].values, df.loc[:,['type']].values
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+
+#Creamos la clase para el perceptron
+class SimplePerceptron():
+
+    def __init__(self, eta):
+        """
+        :param eta: tasa de aprendizaje
+        """
+        self.eta = eta
