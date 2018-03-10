@@ -93,3 +93,11 @@ plt.ylabel('Errores')
 plt.tight_layout()
 plt.show()
 
+#Comprobamos la precisión del perceptron con los datos de test
+print('_'*60 + "Prediccion para X_test")
+prediction = sppn.predict(X_test)
+print (prediction)
+print (y_test.T[0])
+print (np.array_equal(prediction, y_test.T[0]))
+print('_'*60 + "PRECISION")
+print(str(np.sum(prediction == y_test.T[0])/prediction.shape[0] * 100) + ' %')
