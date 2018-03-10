@@ -47,3 +47,12 @@ class SimplePerceptron():
         :param eta: tasa de aprendizaje
         """
         self.eta = eta
+
+    def zeta(self, X):
+        """
+        Calcula el producto de la entrada por su peso
+        :param X: datos de entrenamiento con las caracteristicas. Array
+        """
+        zeta = np.dot(1, self.weights[0]) + np.dot(X, self.weights[1:])
+        return zeta
+
