@@ -50,7 +50,7 @@ class SimplePerceptron():
 
     def zeta(self, X):
         """
-        Calcula el producto de la entrada por su peso
+        Calcula el producto de las entradas por sus pesos
         :param X: datos de entrenamiento con las caracteristicas. Array
         """
         zeta = np.dot(1, self.weights[0]) + np.dot(X, self.weights[1:])
