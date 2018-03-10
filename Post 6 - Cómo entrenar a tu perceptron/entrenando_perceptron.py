@@ -95,7 +95,7 @@ plt.show()
 
 #Comprobamos la precisión del perceptron con los datos de test
 print('_'*60 + "Prediccion para X_test")
-prediction = sppn.predict(X_test)
+prediction = sp.predict(X_test)
 print (prediction)
 print (y_test.T[0])
 print (np.array_equal(prediction, y_test.T[0]))
