@@ -86,3 +86,10 @@ class SimplePerceptron():
 sp = SimplePerceptron(eta=0.1)
 #Entrenamos
 sp.fit(X_train, y_train)
+#Ploteamos las iteraciones y numero de errores
+plt.plot(range(1, len(sp.errors) + 1), sp.errors, marker='o')
+plt.xlabel('Iteracion')
+plt.ylabel('Errores')
+plt.tight_layout()
+plt.show()
+
