@@ -82,3 +82,7 @@ class SimplePerceptron():
             if errors == 0:
                 break
 
+#Creamos una instancia de la clase
+sp = SimplePerceptron(eta=0.1)
+#Entrenamos
+sp.fit(X_train, y_train)
