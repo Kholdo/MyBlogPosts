@@ -56,3 +56,11 @@ class SimplePerceptron():
         zeta = np.dot(1, self.weights[0]) + np.dot(X, self.weights[1:])
         return zeta
 
+    def predict(self, X):
+        """
+        Calcula la salida de la neurona teniendo en cuenta la función de activación
+        :param X: datos con los que predecir la salida de la neurona. Array
+        :return: salida de la neurona
+        """
+        output = np.where(self.zeta(X) >= 0.0, 1, 0)
+        return output
