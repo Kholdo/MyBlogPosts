@@ -9,6 +9,10 @@ Python Version: 3.5
 import pandas as pd
 
 #Importando los datos
-df = pd.read_csv('data_LR.dsv', sep="|")
+df = pd.read_csv('data_LR.csv', sep="|")
 df = df.replace(',','.', regex=True).astype(float)
+
+print(df.head())
+print(df.tail())
+
 
