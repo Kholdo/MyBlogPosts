@@ -14,67 +14,55 @@ import csv
 
 with open('data_LR.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')
-    TEMPEXT = []
-    KWCLT = []
-    data = []
+    OUTDOOR_TEMP = []
+    ELECTRIC_POWER = []
     for index, row in enumerate(reader):
         if index == 0:
-            encabezado = row
+            header = row
         else:
-            TEMPEXT.append(float(row[0].replace(",", ".")))
-            KWCLT.append(float(row[1].replace(",", ".")))
-            data.append([float(row[0].replace(",", ".")), float(row[1].replace(",", "."))])
-X, y = TEMPEXT, KWCLT
+            try:
+                outNum = float(row[0].replace(",", "."))
+            except:
+                outNum = None
+            OUTDOOR_TEMP.append(outNum)
+            try:
+                elecNum = float(row[1].replace(",", "."))
+            except:
+                elecNum = None
+            ELECTRIC_POWER.append(elecNum)
 
 
-fs = 10  # fontsize
-fig, axs = plt.subplots(3, 2, figsize=(6, 6))
-plt.subplots_adjust(top=0.9, bottom=0.1, hspace=0.5, wspace=0.2, left=0.125, right=0.9)
-axs[0, 0].scatter(X, y, c='r', edgecolors=(0, 0, 0), alpha=0.2)
-axs[0, 0].set_title('Scatter KWCLT vs TEMPEXT', fontsize=fs)
-axs[1, 0].hist(X, color='red')
-axs[1, 0].set_title('Hist TEMPEXT', fontsize=fs)
-axs[0, 1].hist2d(X, y)
-axs[0, 1].set_title('Hist 2D', fontsize=fs)
-axs[1, 1].hist(y, color='blue')
-axs[1, 1].set_title('Hist KWCLT', fontsize=fs)
-axs[2, 0].boxplot(X)
-axs[2, 0].set_title('Box TEMPEXT', fontsize=fs)
-axs[2, 1].boxplot(y)
-axs[2, 1].set_title('Box KWCLT', fontsize=fs)
-plt.show()
+def info(header, data_list):
+    """
+    :param header: lista con los encabezados de las columnas
+    :param data_list: lista con las listas de datos de las columnas: [lista1, lista2, etc...]
 
-# Modelo con sklearn
-# Loading data into a dataframe
-# df = pd.read_csv('data_LR.csv', sep="|")
-# df = df.replace(',','.', regex=True).astype(float)
-# dataframe info section
-# print(df.head())
-# print(df.tail())
-# print('_'*60 + 'COLUMNS')
-# print(df.columns.values)
-# print('_'*60 + 'SHAPE')
-# print(df.shape)
-# print('_'*60 + 'INFO')
-# print(df.info())
-# print('_'*60 + 'DESCRIBE')
-# print(df.describe())
-# df = df[df['KWCLT']>0]
-# df = df[df['KWIT']>0]
-# print(df.describe())
-# print('_'*60 + 'NULL VALUES')
-# print(df.isnull().sum())
+    :return: diccionario de diccionarios de valores con tipo de dato, número de na, media, std, min, max de cada columna
+    """
+    from collections import defaultdict
 
-# drawing the data
-# X, y = df['TEMPEXT'].values, df['KWCLT'].values
+    header = header
+    columns = data_list
+    values = defaultdict()
+    for index, head in enumerate(header):
+        aux = defaultdict()
+        aux['clases'] = set([type(ele) for ele in columns[index]])
+        aux['na'] = sum(1 for ele in columns[index] if ele == None)
+        # media
+        media = sum(ele for ele in columns[index] if ele != None) / len(columns[index])
+        aux['media'] = media
+        # std
+        n = sum(1 for ele in columns[index] if ele != None)
+        std = ((1 / (n - 1)) * sum((ele - media) ** 2 for ele in columns[index] if ele != None)) ** 0.5
+        aux['std'] = std
+        # minimo
+        aux['min'] = min(ele for ele in columns[index] if ele != None)
+        # maximo
+        aux['max'] = max(ele for ele in columns[index] if ele != None)
+        values[head] = aux
+    return values
 
-# fig, axs = plt.subplots(2, 2, figsize=(8, 8))
-# axs[0, 0].scatter(X, y, c='r', edgecolors=(0, 0, 0))
-# axs[0, 0].set_title('Scatter X y')
-# axs[1, 0].hist(X, color='red')
-# axs[1, 0].set_title('Hist X')
-# axs[0, 1].hist(y, color='blue')
-# axs[0, 1].set_title('Hist y')
-# axs[1, 1].hist2d(X, y)
-# axs[1, 1].set_title('Hist 2D')
-# plt.show()
+print ('_'*60 + 'INFO')
+print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
+
+
