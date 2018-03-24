@@ -108,3 +108,16 @@ OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in in
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
 visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
+
+#Creamos las listas para training y test aleatoriamente
+all_data = [[x_val, y_val] for x_val, y_val in zip(OUTDOOR_TEMP, ELECTRIC_POWER)]
+print (all_data[:5])
+random.shuffle(all_data)
+div = math.ceil(len(all_data)*0.3)
+data_train = all_data[:div]
+data_test = all_data[div:]
+
+data_train_X = [ele[0] for ele in data_train]
+data_train_y = [ele[1] for ele in data_train]
+data_test_X = [ele[0] for ele in data_test]
+data_test_y = [ele[1] for ele in data_test]
