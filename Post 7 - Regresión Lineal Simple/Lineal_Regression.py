@@ -62,6 +62,34 @@ def info(header, data_list):
         values[head] = aux
     return values
 
+def visual(header, X, y):
+    """
+
+    :param header: Lista con los nombres de los encabezados
+    :param X: Lista con los valores de la columna a colocar en el eje X
+    :param y: Lista con los valores de la columna a colocar en el eje y
+    :return: matplotlib figure plot
+    """
+
+    fs = 10  # fontsize
+    fig, axs = plt.subplots(3, 2, figsize=(6, 6))
+    plt.subplots_adjust(top=0.9, bottom=0.1, hspace=0.5, wspace=0.2, left=0.125, right=0.9)
+    axs[0, 0].scatter(X, y, c='r', edgecolors=(0, 0, 0), alpha=0.2)
+    axs[0, 0].set_title('Scatter %s vs %s' %(header[1], header[0]), fontsize=fs)
+    axs[1, 0].hist(X, color='red')
+    axs[1, 0].set_title('Hist %s' %header[0], fontsize=fs)
+    axs[0, 1].hist2d(X, y)
+    axs[0, 1].set_title('Hist 2D', fontsize=fs)
+    axs[1, 1].hist(y, color='blue')
+    axs[1, 1].set_title('Hist %s' %header[1], fontsize=fs)
+    axs[2, 0].boxplot(X)
+    axs[2, 0].set_title('Box %s' %header[0], fontsize=fs)
+    axs[2, 1].boxplot(y)
+    axs[2, 1].set_title('Box %s' %header[1], fontsize=fs)
+    plt.show()
+
+
+
 print ('_'*60 + 'INFO')
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
