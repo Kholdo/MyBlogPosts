@@ -36,8 +36,9 @@ def info(header, data_list):
     """
     :param header: lista con los encabezados de las columnas
     :param data_list: lista con las listas de datos de las columnas: [lista1, lista2, etc...]
-    :return: diccionario de diccionarios de valores con tipo de dato, número de na, media, std, min, max de cada columna
+    :return: diccionario de diccionarios de valores con número de registros, tipo de dato, número de na, media, std, min, max de cada columna
     """
+
     from collections import defaultdict
 
     header = header
@@ -45,6 +46,7 @@ def info(header, data_list):
     values = defaultdict()
     for index, head in enumerate(header):
         aux = defaultdict()
+        aux['len'] = len(columns[index])
         aux['clases'] = set([type(ele) for ele in columns[index]])
         aux['na'] = sum(1 for ele in columns[index] if ele == None)
         # media
