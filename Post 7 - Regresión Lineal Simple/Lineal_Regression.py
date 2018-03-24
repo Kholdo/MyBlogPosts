@@ -124,7 +124,6 @@ data_train_y = [ele[1] for ele in data_train]
 data_test_X = [ele[0] for ele in data_test]
 data_test_y = [ele[1] for ele in data_test]
 
-
 # Creamos la clase para el modelo de regresión lineal simple
 class Lin_reg():
 
