@@ -65,4 +65,10 @@ def info(header, data_list):
 print ('_'*60 + 'INFO')
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
+#Quitamos los nas
+index_to_drop = [index for index, val in enumerate(ELECTRIC_POWER) if val is None]
+ELECTRIC_POWER = [val for index, val in enumerate(ELECTRIC_POWER) if index not in index_to_drop]
+OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in index_to_drop]
+
+print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
