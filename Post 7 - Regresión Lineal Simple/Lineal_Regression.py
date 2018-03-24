@@ -123,3 +123,40 @@ data_train_X = [ele[0] for ele in data_train]
 data_train_y = [ele[1] for ele in data_train]
 data_test_X = [ele[0] for ele in data_test]
 data_test_y = [ele[1] for ele in data_test]
+
+
+# Creamos la clase para el modelo de regresión lineal simple
+class Lin_reg():
+
+    def __init__(self, X, Y):
+        """
+        :param X: lista con los valores de la variable de las abscisas
+        :param y: lista con los valores de la variable de las ordenadas
+        """
+        self.X = X
+        self.y = Y
+        self.N = len(self.X)
+        self.X_mean = sum(self.X) / len(self.X)
+        self.y_mean = sum(self.y) / len(self.y)
+        self.X_std = (1 / (self.N - 1) * sum((ele - self.X_mean) ** 2
+                                             for ele in self.X)) ** 0.5
+        self.y_std = (1 / (self.N - 1) * sum((ele - self.y_mean) ** 2
+                                             for ele in self.y)) ** 0.5
+        self.X_sigma = self.X_std ** 2
+        self.y_sigma = self.y_std ** 2
+        self.cov = sum([i * j for (i, j) in zip([ele - self.X_mean for ele in self.X],
+                                                [ele - self.y_mean for ele in self.y])]) / (self.N - 1)
+        self.r = self.cov / (self.X_sigma * self.y_sigma)
+
+    def Coeficientes(self):
+        if len(self.X) != len(self.y):
+            raise ValueError('unequal length')
+        self.b = self.cov / self.X_sigma
+        self.a = self.y_mean - self.b * self.X_mean
+        return self.a, self.b
+
+    def predict(self, X):
+        yp = []
+        for x in X:
+            yp.append(a + b * x)
+        return yp
