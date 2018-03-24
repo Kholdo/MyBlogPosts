@@ -36,7 +36,6 @@ def info(header, data_list):
     """
     :param header: lista con los encabezados de las columnas
     :param data_list: lista con las listas de datos de las columnas: [lista1, lista2, etc...]
-
     :return: diccionario de diccionarios de valores con tipo de dato, número de na, media, std, min, max de cada columna
     """
     from collections import defaultdict
@@ -64,7 +63,6 @@ def info(header, data_list):
 
 def visual(header, X, y):
     """
-
     :param header: Lista con los nombres de los encabezados
     :param X: Lista con los valores de la columna a colocar en el eje X
     :param y: Lista con los valores de la columna a colocar en el eje y
@@ -89,7 +87,6 @@ def visual(header, X, y):
     plt.show()
 
 
-
 print ('_'*60 + 'INFO')
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
@@ -100,3 +97,14 @@ OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in in
 
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
+#Ploteamos la gráfica
+visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
+
+#Quitamos los outlier o valores atípicos
+index_to_drop = [index for index, val in enumerate(OUTDOOR_TEMP) if val == 0]
+ELECTRIC_POWER = [val for index, val in enumerate(ELECTRIC_POWER) if index not in index_to_drop]
+OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in index_to_drop]
+
+print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
+
+visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
