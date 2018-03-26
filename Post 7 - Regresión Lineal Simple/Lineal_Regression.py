@@ -18,7 +18,7 @@ import math
 # 1 - Obtenemos los datos
 import csv
 
-with open('data_LR.dsv', 'r') as f:
+with open('data_LR.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')
     OUTDOOR_TEMP = []
     ELECTRIC_POWER = []
@@ -118,7 +118,7 @@ print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
 visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
 
-sns.jointplot(np.asarray(OUTDOOR_TEMP) ,np.asarray(ELECTRIC_POWER), dropna = True, kind="hex")
+#sns.jointplot(np.asarray(OUTDOOR_TEMP) ,np.asarray(ELECTRIC_POWER), dropna = True, kind="hex")
 
 # 4 - Creamos los datos de entrenamiento y testeo
 
@@ -183,6 +183,9 @@ print('El coeficiente de correlación es: r = %f' %mylinreg.r)
 predictions = mylinreg.predict(data_test_X)
 
 plt.scatter(data_test_y, predictions, c='r', edgecolors=(0, 0, 0), alpha=0.5)
-plt.title('y test values vs predicted values', fontsize=10)
-plt.xlabel('Longitude')
-plt.ylabel('Latitude')
+plt.title('predicted values vs real values', fontsize=10)
+plt.xlabel('real values')
+plt.ylabel('predicted values')
+plt.show()
+
+# 7 - Evaluación del modelo
