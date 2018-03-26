@@ -135,6 +135,7 @@ data_train_y = [ele[1] for ele in data_train]
 data_test_X = [ele[0] for ele in data_test]
 data_test_y = [ele[1] for ele in data_test]
 
+# 5 - Creamos el modelo y lo entrenamos
 # Creamos la clase para el modelo de regresión lineal simple
 class Lin_reg():
 
@@ -170,3 +171,10 @@ class Lin_reg():
         for x in X:
             yp.append(a + b * x)
         return yp
+
+# Creamos una instancia de la clase pasándole los datos de entrenamiento
+mylinreg=Lin_reg(data_train_X,data_train_y)
+#Le pedimos al modelo los coeficientes:
+b, a = mylinreg.Coeficientes()
+print ('La recta de regresión es: y = %f X + %f'%(mylinreg.Coeficientes()))
+print('El coeficiente de correlación es: r = %f' %mylinreg.r)
