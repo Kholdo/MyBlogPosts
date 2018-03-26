@@ -178,3 +178,11 @@ mylinreg=Lin_reg(data_train_X,data_train_y)
 b, a = mylinreg.Coeficientes()
 print ('La recta de regresión es: y = %f X + %f'%(mylinreg.Coeficientes()))
 print('El coeficiente de correlación es: r = %f' %mylinreg.r)
+
+# 6 - Hacemos la predicción con los datos de testeo
+predictions = mylinreg.predict(data_test_X)
+
+plt.scatter(data_test_y, predictions, c='r', edgecolors=(0, 0, 0), alpha=0.5)
+plt.title('y test values vs predicted values', fontsize=10)
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
