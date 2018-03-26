@@ -7,12 +7,18 @@ Python Version: 3.5
 """
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
+import random
+import math
 
-# Modelo "cincel y martillo"
+## Modelo "cincel y martillo"
+
+# 1 - Obtenemos los datos
 import csv
 
-with open('data_LR.csv', 'r') as f:
+with open('data_LR.dsv', 'r') as f:
     reader = csv.reader(f, delimiter='|')
     OUTDOOR_TEMP = []
     ELECTRIC_POWER = []
@@ -31,6 +37,9 @@ with open('data_LR.csv', 'r') as f:
                 elecNum = None
             ELECTRIC_POWER.append(elecNum)
 
+# 2 - Un vistazo a los datos
+print('_'*60 + 'COLUMNS')
+print (header)
 
 def info(header, data_list):
     """
@@ -62,6 +71,14 @@ def info(header, data_list):
         aux['max'] = max(ele for ele in columns[index] if ele != None)
         values[head] = aux
     return values
+
+print('_'*60 + 'INFO')
+print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
+#Quitamos los nas
+index_to_drop = [index for index, val in enumerate(ELECTRIC_POWER) if val is None]
+ELECTRIC_POWER = [val for index, val in enumerate(ELECTRIC_POWER) if index not in index_to_drop]
+OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in index_to_drop]
+print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
 def visual(header, X, y):
     """
