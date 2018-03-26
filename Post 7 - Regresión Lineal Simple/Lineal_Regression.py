@@ -200,3 +200,40 @@ RMSE = MSE ** 0.5
 print ('Mean Absolute Error: %f' %MAE)
 print ('Mean Square Error: %f' %MSE)
 print ('Root Mean Square Error: %f' %RMSE)
+
+data_test_mean = sum(ele for ele in data_test_y)/len(data_test_y)
+predictions_mean = sum(ele for ele in predictions)/len(predictions)
+
+data_test_std = (1 / (len(data_test_y)-1) * sum((ele - data_test_mean) ** 2
+                      for ele in data_test_y)) ** 0.5
+predictions_std = (1 / (len(predictions)-1) * sum((ele - predictions_mean) ** 2
+                      for ele in predictions)) ** 0.5
+cov = sum([i * j for (i, j) in zip([ele - data_test_mean for ele in data_test_y],[ele - predictions_mean for ele in predictions])]) / (len(predictions))
+
+print(cov**2/(data_test_std**2 * predictions_std**2))
+print (cov/(data_test_std * predictions_std))
+
+mu = (sum(np.asarray(data_test_y) - np.asarray(predictions))/len(np.asarray(data_test_y) - np.asarray(predictions)))
+sigma = 15  # standard deviation of distribution
+x = np.asarray(data_test_y) - np.asarray(predictions)
+
+num_bins = 50
+
+fig, ax = plt.subplots()
+
+# the histogram of the data
+n, bins, patches = ax.hist(x, num_bins, density=1)
+# add a 'best fit' line
+y = ((1 / (np.sqrt(2 * np.pi) * sigma)) *
+     np.exp(-0.5 * (1 / sigma * (bins - mu))**2))
+ax.plot(bins, y, '--')
+ax.set_xlabel('Smarts')
+ax.set_ylabel('Probability density')
+ax.set_title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
+
+# Tweak spacing to prevent clipping of ylabel
+fig.tight_layout()
+plt.show()
+
+#Residuos
+#sns.distplot((np.asarray(data_test_y) - np.asarray(predictions)), bins = 50)
