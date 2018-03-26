@@ -80,6 +80,8 @@ ELECTRIC_POWER = [val for index, val in enumerate(ELECTRIC_POWER) if index not i
 OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in index_to_drop]
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
+# 3 - Exploramos y modificamos los datos
+
 def visual(header, X, y):
     """
     :param header: Lista con los nombres de los encabezados
@@ -105,18 +107,6 @@ def visual(header, X, y):
     axs[2, 1].set_title('Box %s' %header[1], fontsize=fs)
     plt.show()
 
-
-print ('_'*60 + 'INFO')
-print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
-
-#Quitamos los nas
-index_to_drop = [index for index, val in enumerate(ELECTRIC_POWER) if val is None]
-ELECTRIC_POWER = [val for index, val in enumerate(ELECTRIC_POWER) if index not in index_to_drop]
-OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in index_to_drop]
-
-print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
-
-#Ploteamos la gráfica
 visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
 
 #Quitamos los outlier o valores atípicos
@@ -127,6 +117,10 @@ OUTDOOR_TEMP = [val for index, val in enumerate(OUTDOOR_TEMP) if index not in in
 print (info(header, [OUTDOOR_TEMP, ELECTRIC_POWER]))
 
 visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
+
+sns.jointplot(np.asarray(OUTDOOR_TEMP) ,np.asarray(ELECTRIC_POWER), dropna = True, kind="hex")
+
+
 
 #Creamos las listas para training y test aleatoriamente
 all_data = [[x_val, y_val] for x_val, y_val in zip(OUTDOOR_TEMP, ELECTRIC_POWER)]
