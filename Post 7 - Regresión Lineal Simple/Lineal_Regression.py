@@ -120,7 +120,7 @@ visual(header, OUTDOOR_TEMP, ELECTRIC_POWER)
 
 sns.jointplot(np.asarray(OUTDOOR_TEMP) ,np.asarray(ELECTRIC_POWER), dropna = True, kind="hex")
 
-
+# 4 - Creamos los datos de entrenamiento y testeo
 
 #Creamos las listas para training y test aleatoriamente
 all_data = [[x_val, y_val] for x_val, y_val in zip(OUTDOOR_TEMP, ELECTRIC_POWER)]
