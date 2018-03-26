@@ -12,12 +12,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import random
 import math
+import csv
 
 ## Modelo "cincel y martillo"
 
 # 1 - Obtenemos los datos
-import csv
-
 with open('data_LR.csv', 'r') as f:
     reader = csv.reader(f, delimiter='|')
     OUTDOOR_TEMP = []
