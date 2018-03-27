@@ -175,9 +175,14 @@ class Lin_reg():
 # Creamos una instancia de la clase pasándole los datos de entrenamiento
 mylinreg=Lin_reg(data_train_X,data_train_y)
 #Le pedimos al modelo los coeficientes:
-b, a = mylinreg.Coeficientes()
-print ('La recta de regresión es: y = %f X + %f'%(mylinreg.Coeficientes()))
+a, b = mylinreg.Coeficientes()
+print ('La recta de regresión es: y = %f + %f * X'%(mylinreg.Coeficientes()))
 print('El coeficiente de correlación es: r = %f' %mylinreg.r)
+
+#Dibujamos los datos de entremamiento y la recta de regresión
+plt.scatter(data_train_X, data_train_y, c='r', edgecolors=(0, 0, 0), alpha=0.5)
+plt.plot(data_train_X, [a + b * x for x in data_train_X])
+plt.show()
 
 # 6 - Hacemos la predicción con los datos de testeo
 predictions = mylinreg.predict(data_test_X)
