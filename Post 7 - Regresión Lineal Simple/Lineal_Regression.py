@@ -126,8 +126,8 @@ all_data = [[x_val, y_val] for x_val, y_val in zip(OUTDOOR_TEMP, ELECTRIC_POWER)
 print (all_data[:5])
 random.shuffle(all_data)
 div = math.ceil(len(all_data)*0.3)
-data_train = all_data[:div]
-data_test = all_data[div:]
+data_train = all_data[div:]
+data_test = all_data[:div]
 
 data_train_X = [ele[0] for ele in data_train]
 data_train_y = [ele[1] for ele in data_train]
@@ -193,6 +193,14 @@ plt.xlabel('real values')
 plt.ylabel('predicted values')
 plt.show()
 
+#Ploteo de valores test y predicted
+plt.scatter(data_test_X, data_test_y, c='b', edgecolors=(0, 0, 0), alpha=0.5)
+plt.scatter(data_test_X, predictions, c='r', edgecolors=(0, 0, 0), alpha=0.5)
+plt.title('Electric Power vs Outdoor Temp', fontsize=10)
+plt.xlabel('Outdoor Temp')
+plt.ylabel('Electric Power')
+plt.show()
+
 # 7 - Evaluación del modelo
 #Metricas
 #Mean Error - Desviación media
@@ -211,7 +219,6 @@ print ('Mean Absolute Error: %f' %MAE)
 print ('Mean Square Error: %f' %MSE)
 print ('Root Mean Square Error: %f' %RMSE)
 print ('Standard Desviation of Residuals: %f' %SDR)
-
 
 data_test_mean = sum(ele for ele in data_test_y)/len(data_test_y)
 predictions_mean = sum(ele for ele in predictions)/len(predictions)
