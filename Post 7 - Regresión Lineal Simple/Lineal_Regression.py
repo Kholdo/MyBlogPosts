@@ -195,15 +195,23 @@ plt.show()
 
 # 7 - Evaluación del modelo
 #Metricas
+#Mean Error - Desviación media
+ME = sum(y_pred - y_test for y_pred, y_test in zip(predictions,data_test_y)) / len(predictions)
 #Mean Absolute Error (error absoluto medio)
 MAE = sum(abs(y_pred - y_test) for y_pred, y_test in zip(predictions,data_test_y)) / len(predictions)
 #Mean Square Error (error cuadrático medio)
 MSE = sum((y_pred - y_test)**2 for y_pred, y_test in zip(predictions, data_test_y)) / len(predictions)
 #Root Mean Square Error - error de la raíz cuadrada de la media RMSE
 RMSE = MSE ** 0.5
+#Standard Desviation of Residuals . Desviación típica de los residuos
+SDR = (1 / (len(data_test_y) - 1) * sum((y_test - y_pred) ** 2
+        for y_pred, y_test in zip(predictions, data_test_y))) ** 0.5
+print ('Mean Error: %f' %ME)
 print ('Mean Absolute Error: %f' %MAE)
 print ('Mean Square Error: %f' %MSE)
 print ('Root Mean Square Error: %f' %RMSE)
+print ('Standard Desviation of Residuals: %f' %SDR)
+
 
 data_test_mean = sum(ele for ele in data_test_y)/len(data_test_y)
 predictions_mean = sum(ele for ele in predictions)/len(predictions)
