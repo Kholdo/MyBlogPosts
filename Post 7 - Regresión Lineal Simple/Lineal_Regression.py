@@ -179,9 +179,12 @@ a, b = mylinreg.Coeficientes()
 print ('La recta de regresión es: y = %f + %f * X'%(mylinreg.Coeficientes()))
 print('El coeficiente de correlación es: r = %f' %mylinreg.r)
 
-#Dibujamos los datos de entremamiento y la recta de regresión
+#Dibujamos los datos de entrenamiento y la recta de regresión
+plt.title('training values and regression line', fontsize=10)
 plt.scatter(data_train_X, data_train_y, c='r', edgecolors=(0, 0, 0), alpha=0.5)
 plt.plot(data_train_X, [a + b * x for x in data_train_X])
+plt.xlabel('ºC')
+plt.ylabel('kW')
 plt.show()
 
 # 6 - Hacemos la predicción con los datos de testeo
@@ -196,7 +199,7 @@ plt.show()
 #Ploteo de valores test y predicted
 plt.scatter(data_test_X, data_test_y, c='b', edgecolors=(0, 0, 0), alpha=0.5)
 plt.scatter(data_test_X, predictions, c='r', edgecolors=(0, 0, 0), alpha=0.5)
-plt.title('Electric Power vs Outdoor Temp', fontsize=10)
+plt.title('test_values and regression line', fontsize=10)
 plt.xlabel('Outdoor Temp')
 plt.ylabel('Electric Power')
 plt.show()
