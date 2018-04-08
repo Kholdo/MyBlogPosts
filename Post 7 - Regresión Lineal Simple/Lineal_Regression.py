@@ -223,6 +223,7 @@ print ('Mean Square Error: %f' %MSE)
 print ('Root Mean Square Error: %f' %RMSE)
 print ('Standard Desviation of Residuals: %f' %SDR)
 
+#Correlation coefficient R2
 data_test_mean = sum(ele for ele in data_test_y)/len(data_test_y)
 predictions_mean = sum(ele for ele in predictions)/len(predictions)
 
@@ -235,27 +236,6 @@ cov = sum([i * j for (i, j) in zip([ele - data_test_mean for ele in data_test_y]
 print(cov**2/(data_test_std**2 * predictions_std**2))
 print (cov/(data_test_std * predictions_std))
 
-mu = (sum(np.asarray(data_test_y) - np.asarray(predictions))/len(np.asarray(data_test_y) - np.asarray(predictions)))
-sigma = 15  # standard deviation of distribution
-x = np.asarray(data_test_y) - np.asarray(predictions)
-
-num_bins = 50
-
-fig, ax = plt.subplots()
-
-# the histogram of the data
-n, bins, patches = ax.hist(x, num_bins, density=1)
-# add a 'best fit' line
-y = ((1 / (np.sqrt(2 * np.pi) * sigma)) *
-     np.exp(-0.5 * (1 / sigma * (bins - mu))**2))
-ax.plot(bins, y, '--')
-ax.set_xlabel('Smarts')
-ax.set_ylabel('Probability density')
-ax.set_title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
-
-# Tweak spacing to prevent clipping of ylabel
-fig.tight_layout()
-plt.show()
-
 #Residuos
-#sns.distplot((np.asarray(data_test_y) - np.asarray(predictions)), bins = 50)
+sns.distplot((np.asarray(data_test_y) - np.asarray(predictions)), bins = 50)
+plt.show()
