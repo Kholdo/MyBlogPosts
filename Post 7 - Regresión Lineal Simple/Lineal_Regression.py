@@ -224,17 +224,23 @@ print ('Root Mean Square Error: %f' %RMSE)
 print ('Standard Desviation of Residuals: %f' %SDR)
 
 #Correlation coefficient R2
-data_test_mean = sum(ele for ele in data_test_y)/len(data_test_y)
-predictions_mean = sum(ele for ele in predictions)/len(predictions)
+data_test_mean = sum(ele
+    for ele in data_test_y) / len(data_test_y)
+predictions_mean = sum(ele
+    for ele in predictions) / len(predictions)
 
-data_test_std = (1 / (len(data_test_y)-1) * sum((ele - data_test_mean) ** 2
-                      for ele in data_test_y)) ** 0.5
-predictions_std = (1 / (len(predictions)-1) * sum((ele - predictions_mean) ** 2
-                      for ele in predictions)) ** 0.5
-cov = sum([i * j for (i, j) in zip([ele - data_test_mean for ele in data_test_y],[ele - predictions_mean for ele in predictions])]) / (len(predictions))
+data_test_std = (1 / (len(data_test_y) - 1) * sum((ele - data_test_mean) ** 2
+    for ele in data_test_y)) ** 0.5
+predictions_std = (1 / (len(predictions) - 1) * sum((ele - predictions_mean) ** 2
+    for ele in predictions)) ** 0.5
+cov = sum([i * j
+    for (i, j) in zip([ele - data_test_mean
+        for ele in data_test_y],
+                      [ele - predictions_mean
+        for ele in predictions])
+]) / (len(predictions))
 
-print(cov**2/(data_test_std**2 * predictions_std**2))
-print (cov/(data_test_std * predictions_std))
+print('El coeficiente de correlación es: R2 = %f' % (cov ** 2 / (data_test_std ** 2 * predictions_std ** 2)))
 
 #Residuos
 sns.distplot((np.asarray(data_test_y) - np.asarray(predictions)), bins = 50)
@@ -250,8 +256,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-slr_df = pd.read_csv('data_LR.dsv', sep="|")
+slr_df = pd.read_csv('data_LR.csv', sep="|")
 slr_df = slr_df.replace(',','.', regex=True).astype(float)
 
 # 2- Echamos un vistazo a los datos
-slr_df.head()
+print (slr_df.head())
+print (slr_df.describe())
+print (slr_df.info())
+print('_'*30 + 'NULL VALUES')
+print (slr_df.isnull().sum())
+
+# 3 - Exploramos y modificamos los datos
+
