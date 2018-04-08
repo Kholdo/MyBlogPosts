@@ -286,3 +286,7 @@ sns.lmplot(data = slr_df, x = 'OUTDOOR_TEMP', y ='ELECTRIC_POWER')
 plt.show()
 
 # 4 - Creamos los datos de entrenamiento y testeo
+
+X = slr_df['OUTDOOR_TEMP'].values.reshape(-1,1)
+y = slr_df['ELECTRIC_POWER'].values.reshape(-1,1)
+
