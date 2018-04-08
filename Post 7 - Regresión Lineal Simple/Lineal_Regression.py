@@ -328,5 +328,5 @@ print('RMSE cincel: ', RMSE)
 print ('explained_variance_score', metrics.explained_variance_score(y_test, predictions))
 print ('r2_score', metrics.r2_score(y_test, predictions))
 
-sns.distplot((y_test - predictions)), bins = 50)
+sns.distplot((y_test - predictions), bins = 50)
 plt.show()
