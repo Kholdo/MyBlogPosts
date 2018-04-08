@@ -254,6 +254,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 
@@ -266,6 +267,8 @@ print (slr_df.describe())
 print (slr_df.info())
 print('_'*30 + 'NULL VALUES')
 print (slr_df.isnull().sum())
+#Eliminamos los NaN
+slr_df = slr_df.dropna()
 
 # 3 - Exploramos y modificamos los datos
 
@@ -291,3 +294,14 @@ plt.show()
 X = slr_df['OUTDOOR_TEMP'].values.reshape(-1,1)
 y = slr_df['ELECTRIC_POWER'].values.reshape(-1,1)
 
+X_train, X_test, y_train, y_test = train_test_split(X, y , test_size=0.3, random_state=10)
+
+# 5 - Creamos el modelo y lo entrenamos.
+
+lm = LinearRegression()
+lm.fit(X_train, y_train)
+
+slope = lm.coef_
+intercept = lm.intercept_
+
+print ('La recta de regresión es: y = %f + %f * X'%(lm.intercept_, slope))
