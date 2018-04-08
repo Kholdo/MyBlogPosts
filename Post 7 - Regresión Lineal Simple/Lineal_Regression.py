@@ -254,8 +254,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn import metrics
 
 
 slr_df = pd.read_csv('data_LR.csv', sep="|")
@@ -305,3 +306,27 @@ slope = lm.coef_
 intercept = lm.intercept_
 
 print ('La recta de regresión es: y = %f + %f * X'%(lm.intercept_, slope))
+
+# 6 - Hacemos la predicción con los datos de test.
+
+predictions = lm.predict(X_test)
+
+plt.scatter(y_test, predictions, c='g', edgecolors=(0, 0, 0), alpha=0.5)
+plt.title('predicted values vs test values', fontsize=10)
+plt.xlabel('test values')
+plt.ylabel('predicted values')
+plt.show()
+
+# 7 - Evaluación del modelo
+print('MAE: ', metrics.mean_absolute_error(y_test, predictions))
+print('MAE cincel: ', MAE)
+print('MSE: ', metrics.mean_squared_error(y_test, predictions))
+print('MSE cincel: ', MSE)
+print('RMSE: ', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
+print('RMSE cincel: ', RMSE)
+
+print ('explained_variance_score', metrics.explained_variance_score(y_test, predictions))
+print ('r2_score', metrics.r2_score(y_test, predictions))
+
+sns.distplot((y_test - predictions)), bins = 50)
+plt.show()
