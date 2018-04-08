@@ -268,3 +268,16 @@ print (slr_df.isnull().sum())
 
 # 3 - Exploramos y modificamos los datos
 
+sns.jointplot(data = slr_df, x = 'OUTDOOR_TEMP', y ='ELECTRIC_POWER')
+plt.show()
+
+slr_df = slr_df[slr_df.OUTDOOR_TEMP != 0]
+
+sns.jointplot(data = slr_df, x = 'OUTDOOR_TEMP', y ='ELECTRIC_POWER')
+plt.show()
+
+sns.jointplot(data = slr_df, x = 'OUTDOOR_TEMP', y ='ELECTRIC_POWER', kind = 'hex')
+plt.show()
+
+sns.pairplot(slr_df)
+plt.show()
