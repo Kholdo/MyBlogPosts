@@ -281,3 +281,8 @@ plt.show()
 
 sns.pairplot(slr_df)
 plt.show()
+
+sns.lmplot(data = slr_df, x = 'OUTDOOR_TEMP', y ='ELECTRIC_POWER')
+plt.show()
+
+# 4 - Creamos los datos de entrenamiento y testeo
