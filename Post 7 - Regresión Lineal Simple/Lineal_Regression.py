@@ -239,3 +239,19 @@ print (cov/(data_test_std * predictions_std))
 #Residuos
 sns.distplot((np.asarray(data_test_y) - np.asarray(predictions)), bins = 50)
 plt.show()
+
+
+## Modelo scikit-learn
+
+# 1- Importamos las librerias necesarias y los datos en un dataframe
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+slr_df = pd.read_csv('data_LR.dsv', sep="|")
+slr_df = slr_df.replace(',','.', regex=True).astype(float)
+
+# 2- Echamos un vistazo a los datos
+slr_df.head()
