@@ -16,5 +16,7 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
    [Aquí](https://koldopina.com/web-scraping-con-beautiful-soup-y-lego/) Web Scraping para obtener las direcciones de todas las tiendas de LEGO.
 * #### Post5 - Geopy: geoposiciona las bases rebeldes con Python y Qlik Sense.
     [Aquí]( https://koldopina.com/geoposicionando-python-geopy-qlik-sense/) Geoposicionamiento de las tiendas de LEGO con geopy y Qlik Sense.
-* #### Post6 - Cómo entrenar a tu perceptrón..
+* #### Post6 - Cómo entrenar a tu perceptrón.
     [Aquí]( https://koldopina.com/como-entrenar-a-tu-perceptron/) Entrenamiento de un perceptrón simple.
+* #### Post7 - Regresión Lineal Simple.
+    [Aquí]( https://koldopina.com/regresion-lineal-simple/) Modelo de Regresión Lineal Simple.
