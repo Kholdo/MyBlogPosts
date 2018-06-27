@@ -20,5 +20,5 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
     [Aquí]( https://koldopina.com/como-entrenar-a-tu-perceptron/) Entrenamiento de un perceptrón simple.
 * #### Post7 - Regresión Lineal Simple.
     [Aquí]( https://koldopina.com/regresion-lineal-simple/) Modelo de Regresión Lineal Simple.
-* #### Post11 - Atrévete a crear tus propios datos.
+* #### Post11 - Atrévete a crear tu propio dataset.
     [Aquí]( https://koldopina.com/atrevete-a-crear-tu-propio-dataset/) Función para crear datos para probar modelos.
