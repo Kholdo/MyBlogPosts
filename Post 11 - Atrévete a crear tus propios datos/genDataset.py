@@ -22,3 +22,7 @@ def genDataset(n_features=4, n_samples=1000, low=0, high=10, weights=[0.25, 0.25
     :return: Dataframe
 
     """
+
+    import pandas as pd
+    import numpy as np
+
