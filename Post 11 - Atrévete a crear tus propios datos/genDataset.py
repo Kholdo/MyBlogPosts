@@ -26,3 +26,15 @@ def genDataset(n_features=4, n_samples=1000, low=0, high=10, weights=[0.25, 0.25
     import pandas as pd
     import numpy as np
 
+    if len(weights) == n_features:
+        randomData = np.random.randint(low=low, high=high, size=(n_samples, n_features))
+        weights_m = np.asarray([weights] * n_samples)
+        p = np.array([1 if sum(row) >= threshold else 0 for row in randomData * weights_m])
+        res = pd.DataFrame(data=np.column_stack((randomData, p)),
+                           columns=['feat_%s_%s' % (str(i), str(w)) for i, w in enumerate(weights)] + [
+                               'result_thr_%s' % threshold])
+        if sum(weights) != 1.0:
+            print("Beware. The sum of the weights is different from 1.0: %f" % sum(weights))
+        return res
+    else:
+        print("There must be a weight for each feature. Please, check the weights matrix.")
