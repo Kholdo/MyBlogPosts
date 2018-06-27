@@ -9,7 +9,7 @@ Python Version: 3.5
 
 def genDataset(n_features=4, n_samples=1000, low=0, high=10, weights=[0.25, 0.25, 0.25, 0.25], threshold=5):
     """
-    The function generate a random dataset with n predictor features and the result. The result
+    The function generates a random dataset with n predictor features and the result. The result
     can take two values, zero and one. The result depends on the threshold.
 
     :param n_features: Number of features.
