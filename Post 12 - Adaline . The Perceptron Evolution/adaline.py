@@ -14,7 +14,7 @@ df_perceptron = pd.read_csv('perceptron_data.csv', sep=';')
 def describe_plus(df):
     """
     Function that returns describe dataframe plus number of NaNs, number of uniques values, the mode
-    # and the sts per column
+    # and the std per column
     :param df: dataframe
     :return: dataframe
     """
