@@ -10,6 +10,8 @@ import pandas as pd
 
 df_adaline = pd.read_csv('adaline_data.csv', sep=';')
 df_perceptron = pd.read_csv('perceptron_data.csv', sep=';')
+datasets = [df_adaline, df_perceptron]
+datanames = ['df_adaline', 'df_perceptron']
 
 def describe_plus(df):
     """
@@ -30,7 +32,7 @@ print (describe_plus(df_adaline))
 print (describe_plus(df_perceptron))
 
 
-## Normalizamos y dividimos los datos en datos de entrenamiento y datos de test.
+## We normalize and divide the data into training data and test data.
 train_test_data = {}
 
 for index, dataset in enumerate(datasets):
@@ -44,3 +46,5 @@ for index, dataset in enumerate(datasets):
     X_train, X_test, y_train, y_test = train_test_split(X_std, y, test_size=0.3)
     # Los añadimos al diccionario
     train_test_data[datanames[index]] = {"X_train": X_train, "X_test": X_test, "y_train": y_train, "y_test": y_test}
+
+## We created the Adaline class
