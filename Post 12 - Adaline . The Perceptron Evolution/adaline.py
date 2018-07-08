@@ -28,3 +28,19 @@ def describe_plus(df):
 print (describe_plus(df_adaline))
 
 print (describe_plus(df_perceptron))
+
+
+## Normalizamos y dividimos los datos en datos de entrenamiento y datos de test.
+train_test_data = {}
+
+for index, dataset in enumerate(datasets):
+    X = dataset.iloc[:, [0, 1]].values
+    y = dataset.iloc[:, 2].values
+    # normalizamos
+    X_std = np.copy(X)
+    X_std[:, 0] = (X[:, 0] - X[:, 0].mean()) / X[:, 0].std()
+    X_std[:, 1] = (X[:, 1] - X[:, 1].mean()) / X[:, 1].std()
+    # Dividimos los dataset en datos de entrenamiento y de prueba
+    X_train, X_test, y_train, y_test = train_test_split(X_std, y, test_size=0.3)
+    # Los añadimos al diccionario
+    train_test_data[datanames[index]] = {"X_train": X_train, "X_test": X_test, "y_train": y_train, "y_test": y_test}
