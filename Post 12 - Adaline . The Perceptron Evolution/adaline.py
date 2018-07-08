@@ -7,6 +7,10 @@ Python Version: 3.6
 """
 
 import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from matplotlib.colors import ListedColormap, to_rgba_array
+import matplotlib.pyplot as plt
 
 df_adaline = pd.read_csv('adaline_data.csv', sep=';')
 df_perceptron = pd.read_csv('perceptron_data.csv', sep=';')
