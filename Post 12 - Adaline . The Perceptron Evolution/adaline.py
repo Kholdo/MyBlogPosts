@@ -19,6 +19,35 @@ df_perceptron = pd.read_csv('perceptron_data.csv', sep=';')
 datasets = [df_adaline, df_perceptron]
 datanames = ['df_adaline', 'df_perceptron']
 
+X_a = df_adaline.iloc[:, [0, 1]].values
+y_a = df_adaline.iloc[:, 2].values
+X_p = df_perceptron.iloc[:, [0, 1]].values
+y_p = df_perceptron.iloc[:, 2].values
+
+colors = ['#D7D98E', '#91CFEA']
+palette = sns.color_palette(colors)
+cmap = ListedColormap(colors)
+
+plt.figure(figsize=(15, 15))
+plt.subplot(221)
+plt.title('ADALINE DATA')
+plt.scatter(X_a[:, 0], X_a[:, 1], marker='o', c=y_a,
+            s=25, edgecolor='k', cmap=cmap)
+plt.xlabel('feature 1')
+plt.ylabel('feature 2')
+plt.subplot(222)
+plt.title('PERCEPTRON DATA')
+plt.scatter(X_p[:, 0], X_p[:, 1], marker='o', c=y_p,
+            s=25, edgecolor='k', cmap=cmap)
+plt.xlabel('feature 1')
+plt.ylabel('feature 2')
+plt.subplot(223)
+sns.countplot(df_adaline['type'], label='count', palette=palette)
+plt.subplot(224)
+sns.countplot(df_perceptron['type'], label='count', palette=palette)
+
+plt.show()
+
 def describe_plus(df):
     """
     Function that returns describe dataframe plus number of NaNs, number of uniques values, the mode
