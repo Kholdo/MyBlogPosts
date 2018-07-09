@@ -178,6 +178,7 @@ def plot_decision_regions(X, y, classifier, X_test, y_test, resolution=0.02, tes
 
 # TRAINING AND METRICS
 for index, dataset in enumerate(datasets):
+    dataname = datanames[index]
     print(datanames[index] + ' | ' + '#' * 50)
     X = train_test_data[datanames[index]]['X_train']
     y = train_test_data[datanames[index]]['y_train']
@@ -191,17 +192,16 @@ for index, dataset in enumerate(datasets):
     plt.figure(figsize=(15, 6))
     plt.subplot(121)
     plot_decision_regions(X, y, classifier=adaGDK, X_test=X_test, y_test=y_test, test_idx=True)
-    plt.title('Adaline - Gradient Descent K - %s' % datanames[index])
+    plt.title(f'Adaline - Gradient Descent K - {dataname}')
     plt.xlabel('feature 1')
     plt.ylabel('feature 2')
     plt.legend(loc='upper right')
 
     plt.subplot(122)
     plt.plot(range(1, len(adaGDK.coste) + 1), adaGDK.coste, marker='o')
-    plt.title('Función de coste vs Epoch - %s' % datanames[index])
+    plt.title(f'Función de coste vs Epoch - {dataname}')
     plt.xlabel('Epochs')
     plt.ylabel('Sum-squared-error')
-
     plt.tight_layout()
     plt.show()
 
@@ -218,12 +218,12 @@ for index, dataset in enumerate(datasets):
     plt.setp(cm_char.get_xticklabels(), visible=False)
     plt.setp(cm_char.get_yticklabels(), visible=False)
     plt.tick_params(axis='both', which='both', length=0)
-    title = f'Recall Score: {recall_score}'
+    title = f'{dataname} | Recall Score: {recall_score}'
     plt.title(title, size=15)
     plt.show()
 
-    print (f'Sensibilidad (Recall): {recall_score}')
+    print(f'Sensibilidad (Recall): {recall_score}')
     acc_score = metrics.accuracy_score(y_test, predicciones)
-    print (f'Acccuracy score: {acc_score}')
+    print(f'Acccuracy score: {acc_score}')
     precision = metrics.precision_score(y_test, predicciones)
-    print (f'Precision score: {precision}')
+    print(f'Precision score: {precision}')
