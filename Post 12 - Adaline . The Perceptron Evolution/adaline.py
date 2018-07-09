@@ -82,8 +82,6 @@ for index, dataset in enumerate(datasets):
     # Los añadimos al diccionario
     train_test_data[datanames[index]] = {"X_train": X_train, "X_test": X_test, "y_train": y_train, "y_test": y_test}
 
-    plt.figure(figsize=(15, 5))
-    plt.subplot(('12%d' % (index + 1)))
     plt.title('%s | Normalizado' % datanames[index])
     plt.scatter(X_std[:, 0], X_std[:, 1], marker='o', c=y,
                 s=25, edgecolor='k', cmap=cmap)
