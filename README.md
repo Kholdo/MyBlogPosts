@@ -22,3 +22,5 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
     [Aquí]( https://koldopina.com/regresion-lineal-simple/) Modelo de Regresión Lineal Simple.
 * #### Post11 - Atrévete a crear tu propio dataset.
     [Aquí]( https://koldopina.com/atrevete-a-crear-tu-propio-dataset/) Función para crear datos para probar modelos.
+* #### Post12 - Adaline - The Perceptron Evolution.
+    [Aquí]( https://koldopina.com/adaline/) Entrenamiento del modelo Adaline.
