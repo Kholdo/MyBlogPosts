@@ -91,3 +91,62 @@ for index, dataset in enumerate(datasets):
     plt.show()
 
 ## We created the Adaline class
+
+class Adaline_k():
+
+    def __init__(self, eta=0.0001, n_iter=50):
+        """
+        :param eta: tasa de aprendizaje
+        :param n_iter: número de iteraciones(epochs)
+        """
+        self.eta = eta
+        self.n_iter = n_iter
+
+    def zeta(self, X):
+        """
+        Calcula el producto de las entradas por sus pesos
+        :param X: datos de entrenamiento con las caracteristicas. Array
+        """
+        res = np.dot(1, self.weights[0]) + np.dot(X, self.weights[1:])
+        return res
+
+    def activacion(self, X):
+        """
+        Función lineal de activacion. En este caso sera la misma que zeta
+        """
+        return self.zeta(X)
+
+    def fit(self, X, y):
+        # Generamos pesos iniciales aleatorios
+        self.weights = np.random.random_sample((X.shape[1] + 1,))
+        # Creamos dos listas para añanir el valor de la funcion de coste
+        # y el número de iteración
+        self.iters = []
+        self.coste = []
+        # Comenzamos las iteraciones (epochs)
+        for iter in range(self.n_iter):
+            # Calculamos el producto de las entradas por sus pesos, esto es,
+            # la función zeta
+            zeta = self.zeta(X)
+            # Calculamos los errores entre las salidas obtenidas y las esperadas
+            errors = (y - zeta)
+            # Actualizamos los pesos
+            self.weights[1:] += self.eta * X.T.dot(errors)
+            self.weights[0] += self.eta * errors.sum()
+            # Calculamos el valor de la funcion de coste
+            coste = 0.5 * np.power(errors, 2).sum()
+            # Guardamos el valor del guardiente de la funcion de coste
+            # y tambien guardamos el número de iteración (epoch)
+            self.coste.append(coste)
+            self.iters.append(iter)
+        print('Modelo Adaline_k entrenado correctamente:')
+        print('pesos finales: %s' % str(self.weights))
+        print('coste: %s' % str(self.coste))
+
+    def predict(self, X):
+        """
+        Calcula la salida de la neurona teniendo en cuenta la función de activación
+        :param X: datos con los que predecir la salida de la neurona. Array
+        :return: salida de la neurona
+        """
+        return np.where(self.activacion(X) >= 0.0, 1, -1)
