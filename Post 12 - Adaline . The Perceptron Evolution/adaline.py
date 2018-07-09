@@ -175,3 +175,53 @@ def plot_decision_regions(X, y, classifier, X_test, y_test, resolution=0.02, tes
             plt.scatter(x=X_test[y_test == cl, 0], y=X_test[y_test == cl, 1],
                 alpha=1, c=cmap_test(idx), linewidths=0.8,
                 marker='o', label='%s | test set'%str(cl), edgecolors= 'black')
+
+# TRAINING AND METRICS
+for index, dataset in enumerate(datasets):
+    print(datanames[index] + ' | ' + '#' * 50)
+    X = train_test_data[datanames[index]]['X_train']
+    y = train_test_data[datanames[index]]['y_train']
+    X_test = train_test_data[datanames[index]]['X_test']
+    y_test = train_test_data[datanames[index]]['y_test']
+
+    adaGDK = Adaline_k(n_iter=15, eta=0.001)
+
+    adaGDK.fit(X, y)
+
+    plt.figure(figsize=(15, 6))
+    plt.subplot(121)
+    plot_decision_regions(X, y, classifier=adaGDK, X_test=X_test, y_test=y_test, test_idx=True)
+    plt.title('Adaline - Gradient Descent K - %s' % datanames[index])
+    plt.xlabel('feature 1')
+    plt.ylabel('feature 2')
+    plt.legend(loc='upper right')
+
+    plt.subplot(122)
+    plt.plot(range(1, len(adaGDK.coste) + 1), adaGDK.coste, marker='o')
+    plt.title('Función de coste vs Epoch - %s' % datanames[index])
+    plt.xlabel('Epochs')
+    plt.ylabel('Sum-squared-error')
+
+    plt.tight_layout()
+    plt.show()
+
+    print('COMPROBANDO MODELO | ' + '#' * 50)
+    print('MATRIZ DE CONFUSION')
+    predicciones = adaGDK.predict(X_test)
+    cm = metrics.confusion_matrix(y_test, predicciones)
+    recall_score = metrics.recall_score(y_test, predicciones)
+    fig = plt.figure(figsize=(10, 6))
+    cm_char = fig.add_subplot(1, 1, 1)
+    sns.heatmap(cm, annot=True, fmt=".3f", linewidths=.5, square=True, cmap='Pastel2_r')
+    plt.ylabel('Actual label')
+    plt.xlabel('Predicted label')
+    plt.setp(cm_char.get_xticklabels(), visible=False)
+    plt.setp(cm_char.get_yticklabels(), visible=False)
+    plt.tick_params(axis='both', which='both', length=0)
+    title = f'Recall Score: {recall_score}'
+    plt.title(title, size=15)
+    plt.show()
+    acc_score = metrics.accuracy_score(y_test, predicciones)
+    print(f'Acccuracy score: {acc_score}')
+    precision = metrics.precision_score(y_test, predicciones)
+    print(f'Precision score: {precision}')
