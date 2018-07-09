@@ -221,7 +221,9 @@ for index, dataset in enumerate(datasets):
     title = f'Recall Score: {recall_score}'
     plt.title(title, size=15)
     plt.show()
+
+    print (f'Sensibilidad (Recall): {recall_score}')
     acc_score = metrics.accuracy_score(y_test, predicciones)
-    print(f'Acccuracy score: {acc_score}')
+    print (f'Acccuracy score: {acc_score}')
     precision = metrics.precision_score(y_test, predicciones)
-    print(f'Precision score: {precision}')
+    print (f'Precision score: {precision}')
