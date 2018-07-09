@@ -205,7 +205,7 @@ for index, dataset in enumerate(datasets):
     plt.tight_layout()
     plt.show()
 
-    print('COMPROBANDO MODELO | ' + '#' * 50)
+    print('EVALUANDO MODELO | ' + '#' * 50)
     print('MATRIZ DE CONFUSION')
     predicciones = adaGDK.predict(X_test)
     cm = metrics.confusion_matrix(y_test, predicciones)
