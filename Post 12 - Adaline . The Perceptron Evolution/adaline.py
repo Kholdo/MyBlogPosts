@@ -139,9 +139,9 @@ class Adaline_k():
             # y tambien guardamos el número de iteración (epoch)
             self.coste.append(coste)
             self.iters.append(iter)
-        print('Modelo Adaline_k entrenado correctamente:')
-        print('pesos finales: %s' % str(self.weights))
-        print('coste: %s' % str(self.coste))
+        print (f'Modelo Adaline_k entrenado correctamente:')
+        print (f'pesos finales: {self.weights}')
+        print (f'coste: {self.coste}')
 
     def predict(self, X):
         """
