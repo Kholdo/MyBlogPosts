@@ -67,7 +67,7 @@ print (describe_plus(df_adaline))
 print (describe_plus(df_perceptron))
 
 
-## We normalize and divide the data into training data and test data.
+## We normalize and divide the data into training data and test data. And train data visualization.
 train_test_data = {}
 
 for index, dataset in enumerate(datasets):
@@ -81,5 +81,15 @@ for index, dataset in enumerate(datasets):
     X_train, X_test, y_train, y_test = train_test_split(X_std, y, test_size=0.3)
     # Los añadimos al diccionario
     train_test_data[datanames[index]] = {"X_train": X_train, "X_test": X_test, "y_train": y_train, "y_test": y_test}
+
+    plt.figure(figsize=(15, 5))
+    plt.subplot(('12%d' % (index + 1)))
+    plt.title('%s | Normalizado' % datanames[index])
+    plt.scatter(X_std[:, 0], X_std[:, 1], marker='o', c=y,
+                s=25, edgecolor='k', cmap=cmap)
+    plt.xlabel('feature 1')
+    plt.ylabel('feature 2')
+
+    plt.show()
 
 ## We created the Adaline class
