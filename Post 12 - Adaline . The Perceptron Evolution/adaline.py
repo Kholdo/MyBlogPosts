@@ -60,7 +60,7 @@ def describe_plus(df):
     describe.loc['uniques'] = [len(df_adaline[feature].unique()) for feature in df.columns]
     describe.loc['mode'] = [df_adaline[feature].mode()[0] for feature in df.columns]
     describe.loc['std'] = [df_adaline[feature].std() for feature in df.columns]
-    return describe.transpose()
+    return describe
 
 print (describe_plus(df_adaline))
 
