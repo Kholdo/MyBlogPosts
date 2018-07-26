@@ -13,3 +13,7 @@ def sigmoide(x):
     res = [1 / (1 + np.exp(-ele)) for ele in x]
     return res
 
+x = np.arange(-15, 15, 0.5)
+y = sigmoide(x)
+y_mid = [0.5 for ele in x]
+
