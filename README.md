@@ -24,5 +24,5 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
     [Aquí]( https://koldopina.com/atrevete-a-crear-tu-propio-dataset/) Función para crear datos para probar modelos.
 * #### Post12 - Adaline - The Perceptron Evolution.
     [Aquí]( https://koldopina.com/adaline/) Entrenamiento del modelo Adaline.
-* #### Post13 - De la regresión lineal a la logística.
+* #### Post14 - De la regresión lineal a la logística.
     [Aquí]( https://koldopina.com/regresion-lineal-regresion-logistica/) Tranformación regresión lineal en logística.
