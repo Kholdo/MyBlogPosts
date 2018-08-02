@@ -37,3 +37,7 @@ class LogReg():
         :param B: Matriz de los coeficientes
         :return: Matriz de las probabilidades asociadas a cada suceso
         """
+        import numpy as np
+
+        exponents = []
+        pi = []
