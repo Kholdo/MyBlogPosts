@@ -17,7 +17,7 @@ class LogReg():
         self.error = eta
         self.n_iter = n_iter
 
-    def LH(self, yi, pi):
+    def mv(self, yi, pi):
         """
         funcion para el calculo de la funcion de maxima verosimilitud
         :param yi: lista de las variables respuesta
@@ -30,9 +30,9 @@ class LogReg():
 
         return L
 
-    def logit(self, X, B):
+    def sig(self, X, B):
         """
-        función para el calculo de la función logit
+        función para el calculo de la función sigmoide
         :param X: Matriz de las variables predictoras
         :param B: Matriz de los coeficientes
         :return: Matriz de las probabilidades asociadas a cada suceso
