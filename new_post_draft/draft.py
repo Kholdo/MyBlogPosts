@@ -16,3 +16,12 @@ class LogReg():
         self.error = eta
         self.n_iter = n_iter
 
+    def LH(self, yi, pi):
+        """
+        :param yi: lista de las variables respuesta
+        :param pi: lista de las probabilidades asociadas a cada suceso
+        :return: cálculo de la función de máxima verosimilitud
+        """
+        import numpy as np
+        L = np.prod([float(np.where(y==1, pi[i], 1-pi[i])) for i, y in enumerate(yi)])
+        return L
