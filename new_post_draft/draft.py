@@ -41,3 +41,7 @@ class LogReg():
 
         exponents = []
         pi = []
+
+        for i, row in enumerate(X):
+            exponent = sum([x * B[index] for index, x in enumerate(row)])
+            exponents.append(exponent)
