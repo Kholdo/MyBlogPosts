@@ -45,3 +45,10 @@ class LogReg():
         for i, row in enumerate(X):
             exponent = sum([x * B[index] for index, x in enumerate(row)])
             exponents.append(exponent)
+            try:
+                p = 1 / (1 + np.exp(-exponent))
+            except:
+                p = np.nan
+            pi.append(p)
+
+        return pi
