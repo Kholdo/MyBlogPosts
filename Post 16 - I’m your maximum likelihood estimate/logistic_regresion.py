@@ -73,3 +73,115 @@ percent_zeros = count_zeros/(count_zeros+count_ones)
 print(f'zeros percentage: {percent_zeros*100}')
 percent_ones = count_ones/(count_zeros+count_ones)
 print(f'ones percentage: {percent_ones*100}')
+
+
+#Step three: Create logistic regression model
+
+class LogReg_mv():
+
+    def __init__(self, increment, X, Y):
+        """
+        :param increment: is the limit increase for the algorithm to converge
+        :param X: matrix of the predictor variables
+        :param Y: matrix of the response variables
+        """
+        self.increment = increment
+        self.X = X
+        self.Y = Y
+        # We give an initial value of 0 to the coefficients. Matriz: one column, n rows.
+        self.B = np.zeros(X.shape[1]).reshape(X.shape[1], 1)
+
+    def w_matrix(self, pi):
+        """
+        function for calculating the W matrix
+        :param pi: matrix of probabilities associated with each event
+        :return: matrix W
+        """
+        w = np.identity(len(pi))
+        for index, p in enumerate(pi):
+            w[index][index] = float(p * (1 - p))
+        return w
+
+    def prob_matrix(self, B):
+        """
+        function for the calculation of the sigmoid function
+        :param B: matrix of the coefficients
+        :return: matrix of probabilities associated with each event
+        """
+        import numpy as np
+
+        exponents = []
+        pi = []
+
+        for i, row in enumerate(self.X):
+            exponent = sum([x * B[index] for index, x in enumerate(row)])
+            exponents.append(exponent)
+            p = 1 / (1 + np.exp(-exponent))
+            pi.append(p)
+
+        return pi
+
+    def fit(self):
+        """
+        function that calculates the coefficients of the logistic regression
+        """
+        import numpy as np
+        from numpy import linalg
+
+        self.num_iter = 0
+        self.increments_list = []
+
+        while True:
+            p = self.prob_matrix(self.B)
+            w = self.w_matrix(p)
+
+            first_order_der = np.dot(np.transpose(self.X), np.subtract(self.Y, np.transpose(p)).transpose())
+            second_order_der = np.transpose(self.X).dot(w).dot(self.X)
+            # delta: incremento
+            delta = np.transpose(np.dot(np.transpose(first_order_der), linalg.inv(second_order_der)))
+
+            self.B = self.B + delta
+
+            self.num_iter = self.num_iter + 1
+
+            increment = np.sum(np.power(delta, 2))
+            self.increments_list.append(increment)
+            if increment <= self.increment:
+                break
+
+        equation = f'Y = '
+        for i, b in enumerate(self.B):
+            if i == 0:
+                equation_2 = f'{round(b[0],4)} '
+            else:
+                if b[0] < 0:
+                    equation_2 = equation_2 + f'{round(b[0],4)}⋅X{i} '
+                else:
+                    equation_2 = equation_2 + f'+ {round(b[0],4)}⋅X{i} '
+
+        print('Logistic regresion model fitted')
+        print(f'Completed in {self.num_iter} iterations')
+        print('Increments')
+        print(self.increments_list)
+        print('Coefficients:')
+        print(self.B)
+        print('Equation:')
+        print(equation + equation_2)
+
+        # return self.B
+
+    def predict(self, X):
+        """
+        function that calculates the values for the response variable
+        :param X: test dataset with the predictors variables
+        :return p_list: list with the values for the response variable.
+        """
+        p_list = []
+        for ele in np.array(X):
+            y = float(np.dot(ele, self.B))
+            p = 1 / (1 + np.exp(-y))
+            if p >= 0.5:
+                p_list.append(1)
+            else:
+                p_list.append(0)
+        return p_list
