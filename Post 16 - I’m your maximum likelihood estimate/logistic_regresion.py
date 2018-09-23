@@ -53,3 +53,23 @@ data = genDataset(n_features = 4, n_samples = 50000, low = 0, high = 10,
                   threshold = 6)
 
 data.columns = ['f1', 'f2', 'f3', 'f4', 'y']
+
+#Step two: Data exploration
+print (data.describe().transpose())
+
+fig, axs = plt.subplots(2, 2, figsize=(12, 12), sharey=True)
+pd.crosstab(data['f1'],data['y']).plot( kind='bar', ax = axs[0][0], title = 'Values Frequency for f1')
+pd.crosstab(data['f2'],data['y']).plot(kind='bar', ax = axs[0][1], title = 'Values Frequency for f2')
+pd.crosstab(data['f3'],data['y']).plot(kind='bar', ax = axs[1][0], title = 'Values Frequency for f3')
+pd.crosstab(data['f4'],data['y']).plot(kind='bar', ax = axs[1][1], title = 'Values Frequency for f4')
+plt.show()
+
+sns.countplot(x='y', data=data, palette='hls')
+plt.show()
+
+count_zeros = len(data[data['y']==0])
+count_ones = len(data[data['y']==1])
+percent_zeros = count_zeros/(count_zeros+count_ones)
+print(f'zeros percentage: {percent_zeros*100}')
+percent_ones = count_ones/(count_zeros+count_ones)
+print(f'ones percentage: {percent_ones*100}')
