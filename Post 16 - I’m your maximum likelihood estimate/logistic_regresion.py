@@ -185,3 +185,22 @@ class LogReg_mv():
             else:
                 p_list.append(0)
         return p_list
+
+
+#Step four: Fit the model
+X = data.iloc[:,0:4]
+y = data.iloc[:,4]
+X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.33, random_state=42)
+
+reglog_model = LogReg_mv(increment = 0.000001, X = np.array(X_train), Y = np.array(y_train))
+reglog_model.fit()
+
+plt.figure(figsize=(15, 6))
+plt.subplot(121)
+plt.plot(range(1, len(reglog_model.increments_list) + 1),reglog_model.increments_list, marker='o')
+plt.title('Increment vs Epoch')
+plt.xlabel('Epochs')
+plt.ylabel('Increment')
+plt.tight_layout()
+plt.show()
