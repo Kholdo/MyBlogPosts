@@ -204,3 +204,6 @@ plt.xlabel('Epochs')
 plt.ylabel('Increment')
 plt.tight_layout()
 plt.show()
+
+#Step five: Predict with the test_data
+y_pred = reglog_model.predict(X_test)
