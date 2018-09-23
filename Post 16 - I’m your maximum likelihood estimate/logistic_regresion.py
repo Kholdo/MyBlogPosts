@@ -205,5 +205,28 @@ plt.ylabel('Increment')
 plt.tight_layout()
 plt.show()
 
+
 #Step five: Predict with the test_data
 y_pred = reglog_model.predict(X_test)
+
+
+#Step six: Evaluate the model
+print ('CONFUSION MATRIX')
+predictions = y_pred
+cm = metrics.confusion_matrix(y_test, y_pred)
+acc = metrics.accuracy_score(y_test, y_pred)
+fig = plt.figure(figsize=(10,6))
+cm_char = fig.add_subplot(1,1,1)
+sns.heatmap(cm, annot=True, fmt=".3f", linewidths=.5, square = True, cmap = 'Pastel2_r')
+plt.ylabel('Actual label')
+plt.xlabel('Predicted label')
+plt.setp(cm_char.get_xticklabels(),visible=False)
+plt.setp(cm_char.get_yticklabels(),visible=False)
+plt.tick_params(axis='both', which='both', length=0)
+title = f'Accuracy: {round(acc,2)} %'
+plt.title(title, size = 15)
+plt.show()
+
+logit_model = sm.Logit(y_train,X_train)
+result = logit_model.fit()
+print (result.summary2())
