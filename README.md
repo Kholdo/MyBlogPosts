@@ -25,4 +25,7 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
 * #### Post12 - Adaline - The Perceptron Evolution.
     [Aquí]( https://koldopina.com/adaline/) Entrenamiento del modelo Adaline.
 * #### Post14 - Descubriendo la regresión logística.
-    [Aquí]( https://koldopina.com/descubriendo-regresion-logistica/) Tranformación regresión lineal en logística.
+    [Aquí]( https://koldopina.com/descubriendo-regresion-logistica/) Transformación regresión lineal en logística.
+* #### Post16 - I’m your maximum likelihood estimate.
+    [Aquí]( https://koldopina.com/im-your-maximum-likelihood-estimate/) Modelo de regresión logística utilizando el método de
+    máxima verosimilitud.
