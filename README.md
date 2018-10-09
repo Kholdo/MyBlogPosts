@@ -29,3 +29,5 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
 * #### Post16 - I’m your maximum likelihood estimate.
     [Aquí]( https://koldopina.com/im-your-maximum-likelihood-estimate/) Modelo de regresión logística utilizando el método de
     máxima verosimilitud.
+* #### Post17 - Scraping con Selenium y BeautifulSoup.
+    [Aquí]( https://koldopina.com/scraping-con-selenium-y-beautifulsoup/) Scrapeando unos datos del universo Star Wars.
