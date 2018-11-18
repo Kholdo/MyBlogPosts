@@ -20,3 +20,13 @@ client = ModbusClient(method=method,
                       port=port)
 
 connection = client.connect()
+
+if connection:
+    # we read first the integer data
+    for key, value in stepTH()['memo_Integers'].items():
+        rr = client.read_holding_registers(value, 1, unit=0x01)
+        if not rr.isError():
+            val = rr.registers[0]
+            print('{}: {}'.format(key, val))
+        else:
+            print('{}: error'.format(key))
