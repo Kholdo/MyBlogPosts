@@ -26,8 +26,9 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
     [Aquí]( https://koldopina.com/adaline/) Entrenamiento del modelo Adaline.
 * #### Post14 - Descubriendo la regresión logística.
     [Aquí]( https://koldopina.com/descubriendo-regresion-logistica/) Transformación regresión lineal en logística.
-* #### Post16 - I’m your maximum likelihood estimate.
+* #### Post15 - I’m your maximum likelihood estimate.
     [Aquí]( https://koldopina.com/im-your-maximum-likelihood-estimate/) Modelo de regresión logística utilizando el método de
     máxima verosimilitud.
-* #### Post17 - Scraping con Selenium y BeautifulSoup.
+* #### Post16 - Scraping con Selenium y BeautifulSoup.
     [Aquí]( https://koldopina.com/scraping-con-selenium-y-beautifulsoup/) Scrapeando unos datos del universo Star Wars.
+* #### Post17 - Adquiriendo datos con Python y dispositivos ModBus.
