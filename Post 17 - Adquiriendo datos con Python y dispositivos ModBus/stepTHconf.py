@@ -22,7 +22,7 @@ def step_th():
                    'humedad absoluta maxima': 7024}
 
     default_config = {'method': 'rtu',
-                      'bitstop': 1,
+                      'stopbits': 1,
                       'bytesize': 8,
                       'parity': 'N',
                       'baudrate': 9600,
