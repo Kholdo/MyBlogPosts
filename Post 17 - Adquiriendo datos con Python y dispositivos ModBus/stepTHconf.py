@@ -29,4 +29,6 @@ def step_th():
                       'timeout': 3,
                       'nper':1}
 
-    return {'memo_Integers': memo_integers, 'memo_Floats': memo_floats, 'default_config': default_config}
+    return {'memo_Integers': memo_integers,
+            'memo_Floats': memo_floats,
+            'default_config': default_config}
