@@ -2,7 +2,7 @@ from pymodbus.client.sync import ModbusSerialClient as ModbusClient #initialize 
 from stepTHconf import step_th
 import numpy as np
 import struct
-
+from mysqlConnect import insertQuery
 
 method = step_th()['default_config']['method']
 stopbits = step_th()['default_config']['stopbits']
@@ -24,7 +24,9 @@ client = ModbusClient(method=method,
 connection = client.connect()
 
 if connection:
-    # we read first the integer data
+    #Leemos los valores de los registros tipo integer
+    #correspondientes a la configuración de la sonda
+    print("memo_Integers values")
     for key, value in step_th()['memo_Integers'].items():
         rr = client.read_holding_registers(value, 1, unit=0x01)
         if not rr.isError():
