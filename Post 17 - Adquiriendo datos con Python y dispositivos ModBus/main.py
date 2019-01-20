@@ -34,6 +34,9 @@ if connection:
             print('{}: {}'.format(key, val))
         else:
             print('{}: error'.format(key))
+    
+    #Leemos los valores de los registros tipo float
+    #correspondientes a las medidas de la sonda
     print("memo_floats values")
     measure_names=[]
     values=[]
@@ -55,6 +58,6 @@ if connection:
             print('{}: error'.format(key))
 
     client.close()
-    
+
 #Guardamos los valores en la base de datos
 insertQuery(values)
