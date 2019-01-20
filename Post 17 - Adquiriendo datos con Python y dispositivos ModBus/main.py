@@ -1,5 +1,7 @@
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient #initialize a serial RTU client instance
 from stepTHconf import step_th
+import numpy as np
+import struct
 
 
 method = step_th()['default_config']['method']
