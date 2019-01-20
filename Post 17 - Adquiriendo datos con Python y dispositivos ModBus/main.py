@@ -55,3 +55,6 @@ if connection:
             print('{}: error'.format(key))
 
     client.close()
+    
+#Guardamos los valores en la base de datos
+insertQuery(values)
