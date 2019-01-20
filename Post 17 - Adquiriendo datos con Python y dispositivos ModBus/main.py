@@ -34,8 +34,10 @@ if connection:
             print('{}: {}'.format(key, val))
         else:
             print('{}: error'.format(key))
-
-    for key, value in step_th()['memo_Floats'].items():
+    print("memo_floats values")
+    measure_names=[]
+    values=[]
+    for key, value in sorted(step_th()['memo_Floats'].items()):
         rr1 = client.read_holding_registers(value, 1, unit=0x01)
         rr2 = client.read_holding_registers(value, 2, unit=0x01)
         if not rr1.isError() and not rr2.isError():
@@ -43,7 +45,12 @@ if connection:
             bin_number = '0' + str(np.base_repr(rr2.registers[0], base=2)) \
                          + '0' + str(np.base_repr(rr1.registers[0], base=2))
             f = int(bin_number, 2)
+            value = round(struct.unpack('f', struct.pack('I', f))[0], 1)
+            print("#"*20)
             print('{}:{}'.format(key, struct.unpack('f', struct.pack('I', f))[0]))
+            print('#'*20)
+            values.append(value)
+            measure_names.append(key)
         else:
             print('{}: error'.format(key))
 
