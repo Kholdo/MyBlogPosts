@@ -32,3 +32,4 @@ Aquí iré colocando el código que aparece en las publicaciones de my blog:
 * #### Post16 - Scraping con Selenium y BeautifulSoup.
     [Aquí]( https://koldopina.com/scraping-con-selenium-y-beautifulsoup/) Scrapeando unos datos del universo Star Wars.
 * #### Post17 - Adquiriendo datos con Python y dispositivos ModBus.
+    [Aquí](https://koldopina.com/python-modbus/) Cómo adquirir datos de un dispositivo MODBUS utilizando Python.
